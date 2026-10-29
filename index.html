@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CardCraft Studio 4.4.1 — Voice Experience</title>
+<title>CardCraft Studio 4.5.1 — Import picker</title>
 <style>
 :root{--brand:#5b5bd6;--bg:#f5f6fa;--panel:#fff;--text:#172033;--muted:#667085;--line:#dde2eb;--danger:#c9362b;--ok:#137a4d;--course:#eef0ff;--shadow:0 14px 40px #1720331b}*{box-sizing:border-box}html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text);background:var(--bg)}button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,[contenteditable]:focus-visible{outline:3px solid #5b5bd640;outline-offset:2px}.app{height:100%;display:grid;grid-template-rows:auto 1fr;overflow:hidden}.top{min-height:66px;padding:10px 16px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;z-index:3}.brand{display:flex;align-items:center;gap:10px;min-width:max-content}.logo{width:39px;height:39px;border-radius:12px;background:linear-gradient(145deg,var(--brand),#7c3aed);color:#fff;display:grid;place-items:center;font-weight:900}.brand h1{font-size:16px;margin:0}.brand small{font-size:11px;color:var(--muted)}.courseTitle{border:0;background:transparent;padding:9px;border-radius:9px;font-weight:750;min-width:170px;max-width:330px;flex:1}.actions,.inline{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.btn{border:1px solid var(--line);background:#fff;color:var(--text);border-radius:10px;padding:9px 12px;min-height:38px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:6px}.btn:hover{background:#f8f9fb}.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}.actions .btn{border-color:#e4e7ec}.actions #save{font-weight:700}.actions #save:hover{border-color:#cfd4dc;background:#f9fafb}.btn.danger{color:var(--danger)}.btn.icon{width:38px;padding:0}.btn:disabled{opacity:.38;cursor:not-allowed}.workspace{min-height:0;display:grid;grid-template-columns:275px minmax(430px,1fr) minmax(350px,40%);overflow:hidden}.panel{min-height:0;display:flex;flex-direction:column;background:#fff;border-right:1px solid var(--line)}.panel:last-child{border:0}.head{min-height:62px;padding:14px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}.head h2{font-size:14px;margin:0}.sub{font-size:11px;color:var(--muted);margin-top:2px}.body{min-height:0;overflow:auto;padding:13px}.bottom{padding:12px;border-top:1px solid var(--line)}.pill{font-size:10px;border-radius:999px;background:#eaf8f1;color:var(--ok);padding:5px 8px;font-weight:800}.pill.dirty{background:#fff4dc;color:#985c00}.cards{display:flex;flex-direction:column;gap:8px}.cardItem{width:100%;display:grid;grid-template-columns:32px 1fr auto;gap:9px;align-items:center;text-align:left;border:1px solid var(--line);border-radius:12px;background:#fff;padding:9px;color:var(--text)}.cardItem.active{border-color:var(--brand);background:#f4f4ff;box-shadow:0 0 0 2px #5b5bd612}.num{width:30px;height:30px;border-radius:9px;background:#eef0f5;display:grid;place-items:center;font-size:12px;font-weight:800}.active .num{background:var(--brand);color:#fff}.meta{min-width:0}.ctitle{display:block;font-size:12px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ctype{font-size:10px;color:var(--muted);text-transform:capitalize}.field{margin-bottom:15px}.field label{display:flex;justify-content:space-between;font-size:12px;font-weight:800;margin-bottom:7px}.field label span{font-weight:500;color:var(--muted)}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);border-radius:10px;padding:10px;background:#fff;color:var(--text)}.field textarea{min-height:92px;resize:vertical}.section{border:1px solid var(--line);border-radius:14px;margin-bottom:13px;overflow:hidden}.stitle{padding:10px 12px;background:#f8f9fb;border-bottom:1px solid var(--line);font-size:11px;font-weight:900;letter-spacing:.03em}.sbody{padding:12px}.row{display:grid;grid-template-columns:1fr 1fr;gap:11px}.toolrow{display:flex;gap:5px;flex-wrap:wrap;padding:7px;border:1px solid var(--line);border-bottom:0;border-radius:10px 10px 0 0;background:#f8f9fb}.tool{min-width:31px;height:31px;padding:0 8px;border:1px solid var(--line);border-radius:7px;background:#fff;font-weight:800}.richEdit{min-height:145px;border:1px solid var(--line);border-radius:0 0 10px 10px;padding:11px;line-height:1.55;overflow:auto}.richEdit:empty:before{content:'Enter content...';color:#98a2b3}.hint{font-size:10px;color:var(--muted);line-height:1.45;margin-top:6px}.imageBox{border:1px dashed #aab1c2;border-radius:12px;padding:12px;text-align:center;background:#fafbfc}.thumb{max-width:100%;max-height:180px;border-radius:10px;margin:8px auto;display:block}.option,.checkEdit{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;margin:8px 0}.option input[type=text],.checkEdit input{width:100%;border:1px solid var(--line);border-radius:9px;padding:9px}.mini{border:0;background:transparent;color:var(--danger);font-size:18px}.previewPanel{background:#edf0f5}.previewStage{min-height:0;overflow:auto;display:grid;align-items:start;justify-items:center;padding:24px}.device{width:min(390px,100%);height:min(720px,calc(100vh - 150px));min-height:540px;background:#111827;border:9px solid #111827;border-radius:34px;box-shadow:var(--shadow);overflow:hidden}.device.wide{width:min(760px,100%);border-radius:22px}.screen{height:100%;border-radius:25px;overflow:hidden;background:var(--course);display:grid;grid-template-rows:auto 1fr auto;touch-action:pan-y}.device.wide .screen{border-radius:13px}.learnTop{padding:14px 16px;display:flex;gap:10px;align-items:center}.learnTitle{font-size:11px;font-weight:800;max-width:165px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.progress{height:5px;background:#00000016;border-radius:999px;flex:1;overflow:hidden}.fill{height:100%;background:var(--brand)}.learnMain{min-height:0;overflow:auto;padding:14px 17px 22px;display:grid;place-items:center}.learnCard{width:100%;background:#fff;border-radius:22px;padding:24px 22px;box-shadow:0 14px 38px #17203319}.eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--brand);font-weight:900;margin-bottom:10px}.learnCard h3{font-size:25px;line-height:1.13;margin:0 0 14px}.rich{font-size:14px;line-height:1.58}.rich img{max-width:100%}.mediaLayout{display:grid;gap:16px;align-items:center}.mediaLayout.left,.mediaLayout.right{grid-template-columns:42% 1fr}.mediaLayout.right .media{order:2}.mediaLayout.bottom .media{order:2}.media img{width:100%;max-height:280px;object-fit:cover;border-radius:15px}.media.contain img{object-fit:contain;background:#f6f7f9}.backgroundCard{min-height:400px;background-size:cover;background-position:center;position:relative;color:#fff;overflow:hidden}.backgroundCard:before{content:'';position:absolute;inset:0;background:#0008}.backgroundCard>*{position:relative}.quoteCard{border-left:6px solid var(--brand);background:linear-gradient(145deg,#fff,#f8f7ff)}.quoteMark{font:60px/.6 Georgia,serif;color:var(--brand);opacity:.35}.quoteText{font:650 23px/1.35 Georgia,serif}.quoteBy{margin-top:15px;color:var(--muted);font-size:12px}.answers,.checklist{display:grid;gap:8px;margin-top:15px}.answer,.checkitem{border:1px solid var(--line);border-radius:10px;background:#fff;padding:10px;text-align:left;color:var(--text)}.answer.selected{border-color:var(--brand);background:#f2f2ff}.answer.correct{border-color:#23a46b;background:#eaf8f1}.answer.wrong{border-color:#de554a;background:#fff0ef}.feedback{margin-top:12px;border-radius:10px;padding:10px;font-size:12px;background:#f5f6f8}.checkitem{display:flex;align-items:flex-start;gap:9px}.checkitem input{margin-top:3px}.flipScene{perspective:1000px;min-height:350px}.flipInner{position:relative;width:100%;min-height:350px;transform-style:preserve-3d;transition:transform .55s}.flipInner.flipped{transform:rotateY(180deg)}.flipFace{position:absolute;inset:0;backface-visibility:hidden;background:#fff;border-radius:18px;padding:20px}.flipBack{transform:rotateY(180deg);background:#f8f7ff}.timerText{font-size:10px;color:var(--muted);min-width:86px;text-align:center}.cc-course-audio{width:min(520px,100%);margin-top:18px}.learnBottom{padding:12px 16px;background:#ffffffd4;display:flex;align-items:center;justify-content:space-between;gap:8px}.learnBottom button{border:0;border-radius:10px;background:#fff;padding:9px 13px;font-weight:800;box-shadow:0 3px 10px #00000012}.learnBottom .next{background:var(--brand);color:#fff}.learnBottom button:disabled{opacity:.35}.counter{font-size:10px;color:var(--muted);font-weight:700}.anim-fade{animation:fade .25s}.anim-slide-h{animation:slideH .28s}.anim-slide-v{animation:slideV .28s}.anim-scale{animation:scale .25s}@keyframes fade{from{opacity:.15}to{opacity:1}}@keyframes slideH{from{opacity:.2;transform:translateX(30px)}to{opacity:1;transform:none}}@keyframes slideV{from{opacity:.2;transform:translateY(25px)}to{opacity:1;transform:none}}@keyframes scale{from{opacity:.2;transform:scale(.96)}to{opacity:1;transform:none}}.navHint{position:absolute;z-index:5;width:38px;height:38px;border-radius:50%;border:1px solid #dde2eb;background:#ffffffdf;color:var(--brand);display:grid;place-items:center;font-size:25px;font-weight:900;box-shadow:0 4px 14px #0002;pointer-events:none}.navHint.left{left:8px;top:50%;transform:translateY(-50%)}.navHint.right{right:8px;top:50%;transform:translateY(-50%)}.navHint.up{top:54px;left:50%;transform:translateX(-50%)}.navHint.down{bottom:62px;left:50%;transform:translateX(-50%)}.swipeHelp{position:absolute;left:50%;bottom:68px;transform:translateX(-50%);z-index:5;padding:7px 11px;border-radius:999px;background:#172033dd;color:#fff;font-size:10px;pointer-events:none;white-space:nowrap}.imageCaption{font-size:12px;color:#667085;margin-top:7px;text-align:center}.imageCaption.left{text-align:left}.imageCaption.right{text-align:right}.screen{position:relative}.learnMain.dragging{user-select:none;cursor:grabbing} .navHint{position:fixed;z-index:9;width:38px;height:38px;border-radius:50%;border:1px solid #dde2eb;background:#ffffffdf;color:var(--b);display:grid;place-items:center;font-size:25px;font-weight:900;box-shadow:0 4px 14px #0002;pointer-events:none}.navHint.left{left:10px;top:50%}.navHint.right{right:10px;top:50%}.navHint.up{top:58px;left:50%}.navHint.down{bottom:66px;left:50%}.swipeHelp{position:fixed;left:50%;bottom:70px;transform:translateX(-50%);z-index:9;background:#172033dd;color:#fff;padding:7px 11px;border-radius:99px;font-size:10px}.imageCaption{font-size:12px;color:#667085;margin-top:7px;text-align:center}.imageCaption.left{text-align:left}.imageCaption.right{text-align:right}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 .modalBg{position:fixed;inset:0;background:#10182877;display:none;place-items:center;padding:20px;z-index:20}.modalBg.show{display:grid}.modal{width:min(620px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:18px;box-shadow:var(--shadow)}.mhead{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.mhead h3{font-size:16px;margin:0}.mbody{padding:17px}.mfoot{padding:13px 17px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:8px}.close{border:0;background:transparent;font-size:22px}.typegrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}.typebtn{border:1px solid var(--line);border-radius:12px;background:#fff;padding:13px;text-align:left}.typebtn:hover{border-color:var(--brand);background:#f7f7ff}.typebtn b,.typebtn span{display:block}.typebtn b{font-size:12px}.typebtn span{font-size:10px;color:var(--muted);margin-top:3px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;background:#172033;color:#fff;padding:10px 14px;border-radius:10px;z-index:30;transition:.2s;font-size:12px}.toast.show{opacity:1;transform:translate(-50%,0)}.mobileTabs{display:none}@media(max-width:1050px){.workspace{grid-template-columns:250px minmax(420px,1fr)}.previewPanel{display:none}}@media(max-width:760px){.top{align-items:flex-start}.brand small,.courseTitle,.desktopOnly{display:none}.actions{margin-left:auto}.workspace{display:block;padding-bottom:56px}.panel{display:none;height:calc(100vh - 116px);border:0}.panel.mobileActive{display:flex}.previewPanel.mobileActive{display:flex}.mobileTabs{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;bottom:0;left:0;right:0;height:56px;background:#fff;border-top:1px solid var(--line);z-index:8}.mobileTabs button{border:0;background:#fff;font-weight:800;color:var(--muted)}.mobileTabs button.active{color:var(--brand);background:#f5f5ff}.previewStage{padding:10px}.device{min-height:400px;height:calc(100vh - 190px)}.row,.typegrid{grid-template-columns:1fr}.mediaLayout.left,.mediaLayout.right{grid-template-columns:1fr}.mediaLayout.right .media{order:0}}
@@ -15,7 +15,7 @@
 
 /* Clean 4.1.2 controls: deliberately quiet, aligned with the CardCraft visual language. */
 .cc-audio-pill{position:absolute;right:14px;top:40px;border:1px solid #dde2eb;background:#ffffffcc;color:#344054;border-radius:999px;padding:7px 11px;font-size:11px;font-weight:800;box-shadow:0 2px 8px #1720330c;backdrop-filter:blur(8px);z-index:7}.cc-audio-pill:hover{background:#fff;border-color:#c9ced9;color:var(--brand)}
-</style></head><body><div class="app"><header class="top"><div class="brand"><div class="logo">C</div><div><h1>CardCraft Studio</h1><small>4.1.2 · Clean Experience</small></div></div><input id="courseTitle" class="courseTitle"><div class="actions"><button class="btn icon" id="undo">↶</button><button class="btn icon" id="redo">↷</button><button class="btn desktopOnly" id="open">Open</button><button class="btn" id="save">Save project</button><button class="btn" id="aiBtn">✦ AI</button><button class="btn primary" id="publish">Publish</button><button class="btn icon desktopOnly" id="settings">⚙</button><input id="file" type="file" accept=".json,.cardcraft.json" hidden></div></header><main class="workspace"><aside class="panel mobileActive" data-panel="cards"><div class="head"><div><h2>Course structure</h2><div class="sub" id="count"></div></div><span class="pill" id="status">Saved locally</span></div><div class="body"><div class="cards" id="cards"></div></div><div class="bottom"><button class="btn primary" id="add" style="width:100%">＋ Add card</button></div></aside><section class="panel" data-panel="edit"><div class="head"><div><h2>Card editor</h2><div class="sub" id="editSub"></div></div><div class="inline"><button class="btn icon" id="up">↑</button><button class="btn icon" id="down">↓</button><button class="btn icon" id="dup">⧉</button><button class="btn icon danger" id="del">⌫</button></div></div><div class="body" id="editor"></div></section><section class="panel previewPanel" data-panel="preview"><div class="head" style="background:#fff"><div><h2>Learner preview</h2><div class="sub">Timer, gestures and interactions</div></div><div class="inline"><button class="btn" id="restart">Restart</button><button class="btn" id="deviceBtn">Wide</button></div></div><div class="previewStage"><div class="device" id="device"><div class="screen" id="screen"><span class="navHint left" id="hintLeft">‹</span><span class="navHint right" id="hintRight">›</span><span class="navHint up" id="hintUp">⌃</span><span class="navHint down" id="hintDown">⌄</span><span class="swipeHelp" id="swipeHelp">Swipe or drag to continue</span><div class="learnTop"><div class="learnTitle" id="pCourse"></div><div class="progress"><div class="fill" id="fill"></div></div></div><div class="learnMain"><article class="learnCard" id="pCard"></article></div><div class="learnBottom"><button id="prev">← Back</button><span class="counter" id="counter"></span><span class="timerText" id="timer"></span><button class="next" id="next">Next →</button></div></div></div></div></section></main><nav class="mobileTabs"><button class="active" data-tab="cards">Cards</button><button data-tab="edit">Edit</button><button data-tab="preview">Preview</button></nav></div>
+</style></head><body><div class="app"><header class="top"><div class="brand"><div class="logo">C</div><div><h1>CardCraft Studio</h1><small>4.1.2 · Clean Experience</small></div></div><input id="courseTitle" class="courseTitle"><div class="actions"><button class="btn icon" id="undo">↶</button><button class="btn icon" id="redo">↷</button><button class="btn desktopOnly" id="open">Open</button><button class="btn" id="save">Save project</button><button class="btn" id="jsonGuide" title="Create a course with AI using plain JSON">JSON guide</button><button class="btn" id="aiBtn">✦ AI</button><button class="btn primary" id="publish">Publish</button><button class="btn icon desktopOnly" id="settings">⚙</button><input id="file" type="file" accept=".json,.cardcraft.json" hidden></div></header><main class="workspace"><aside class="panel mobileActive" data-panel="cards"><div class="head"><div><h2>Course structure</h2><div class="sub" id="count"></div></div><span class="pill" id="status">Saved locally</span></div><div class="body"><div class="cards" id="cards"></div></div><div class="bottom"><button class="btn primary" id="add" style="width:100%">＋ Add card</button></div></aside><section class="panel" data-panel="edit"><div class="head"><div><h2>Card editor</h2><div class="sub" id="editSub"></div></div><div class="inline"><button class="btn icon" id="up">↑</button><button class="btn icon" id="down">↓</button><button class="btn icon" id="dup">⧉</button><button class="btn icon danger" id="del">⌫</button></div></div><div class="body" id="editor"></div></section><section class="panel previewPanel" data-panel="preview"><div class="head" style="background:#fff"><div><h2>Learner preview</h2><div class="sub">Timer, gestures and interactions</div></div><div class="inline"><button class="btn" id="restart">Restart</button><button class="btn" id="deviceBtn">Wide</button></div></div><div class="previewStage"><div class="device" id="device"><div class="screen" id="screen"><span class="navHint left" id="hintLeft">‹</span><span class="navHint right" id="hintRight">›</span><span class="navHint up" id="hintUp">⌃</span><span class="navHint down" id="hintDown">⌄</span><span class="swipeHelp" id="swipeHelp">Swipe or drag to continue</span><div class="learnTop"><div class="learnTitle" id="pCourse"></div><div class="progress"><div class="fill" id="fill"></div></div></div><div class="learnMain"><article class="learnCard" id="pCard"></article></div><div class="learnBottom"><button id="prev">← Back</button><span class="counter" id="counter"></span><span class="timerText" id="timer"></span><button class="next" id="next">Next →</button></div></div></div></div></section></main><nav class="mobileTabs"><button class="active" data-tab="cards">Cards</button><button data-tab="edit">Edit</button><button data-tab="preview">Preview</button></nav></div>
 <div class="modalBg" id="addModal"><div class="modal"><div class="mhead"><h3>Add a card</h3><button class="close" data-close="addModal">×</button></div><div class="mbody"><div class="typegrid" id="typeGrid"></div></div></div></div>
 <div class="modalBg" id="settingsModal"><div class="modal"><div class="mhead"><h3>Course settings</h3><button class="close" data-close="settingsModal">×</button></div><div class="mbody"><div class="section"><div class="stitle">Project</div><div class="sbody"><div class="field"><label>Course title</label><input id="sTitle"></div><div class="field"><label>Description</label><textarea id="sDesc"></textarea></div><div class="row"><div class="field"><label>Author</label><input id="sAuthor"></div><div class="field"><label>Passing score</label><input id="sPass" type="number" min="0" max="100"></div></div></div></div><div class="section"><div class="stitle">Navigation and motion</div><div class="sbody"><div class="row"><div class="field"><label>Navigation</label><select id="sNav"><option value="buttons">Buttons only</option><option value="both-h">Buttons + horizontal swipe</option><option value="both-v">Buttons + vertical swipe</option><option value="swipe-h">Horizontal swipe only</option><option value="swipe-v">Vertical swipe only</option></select></div><div class="field"><label>Navigation hints</label><select id="sHints"><option value="arrows-help">Arrows + first-card instruction</option><option value="arrows">Arrows only</option><option value="help">First-card instruction only</option><option value="none">Hide hints</option></select></div></div><div class="row"><div class="field"><label>Transition</label><select id="sTransition"><option value="fade">Fade</option><option value="slide-h">Slide sideways</option><option value="slide-v">Rise (vertical slide)</option><option value="carousel">Carousel</option><option value="flip">Flip</option><option value="cube">Cube</option><option value="stack">Stack (swipe away)</option><option value="scale">Zoom</option><option value="mix">Mix it up (changes card to card)</option><option value="match">Match swipe direction</option><option value="none">None</option></select></div></div></div></div><div class="section"><div class="stitle">Learning journey</div><div class="sbody"><div class="hint">Modules group activities into a learner journey. AI can create these automatically; you can edit the module assignment on each activity.</div><div id="moduleEditor"></div><button class="btn" id="addModule">＋ Add module</button></div></div><div class="section"><div class="stitle">Default timing and theme</div><div class="sbody"><div class="row"><div class="field"><label>Default minimum seconds <span>0–300</span></label><input id="sTime" type="number" min="0" max="300"></div><div class="field"><label>Show countdown</label><select id="sCountdown"><option value="true">Yes</option><option value="false">No</option></select></div></div><div class="row"><div class="field"><label>Accent</label><input id="sPrimary" type="color"></div><div class="field"><label>Background</label><input id="sBg" type="color"></div></div></div></div></div><div class="mfoot"><button class="btn" data-close="settingsModal">Cancel</button><button class="btn primary" id="applySettings">Apply</button></div></div></div>
 <div class="modalBg" id="aiModal"><div class="modal"><div class="mhead"><h3>AI course builder</h3><button class="close" data-close="aiModal">×</button></div><div class="mbody"><div class="section"><div class="stitle">AI is optional</div><div class="sbody"><div class="hint">CardCraft works without AI. AI generates structured CardCraft content; it does not replace the Experience Engine. For production, keep API keys server-side rather than exposing secrets in a published HTML file.</div></div></div><div class="section"><div class="stitle">Provider</div><div class="sbody"><div class="row"><div class="field"><label>Provider</label><select id="aiProvider"><option value="openai">OpenAI-compatible</option><option value="omniroute">OmniRoute / OpenAI-compatible</option><option value="custom">Custom OpenAI-compatible</option></select></div><div class="field"><label>Model</label><input id="aiModel" placeholder="e.g. your-model"></div></div><div class="field"><label>Base URL <span>OpenAI-compatible endpoint</span></label><input id="aiBaseUrl" placeholder="https://.../v1"></div><div class="field"><label>API key <span>Stored locally for prototype use</span></label><input id="aiKey" type="password" placeholder="Paste your API key"></div><button class="btn" id="aiTest">Test connection</button><span class="hint" id="aiStatus"></span></div></div><div class="section"><div class="stitle">Build an entire course</div><div class="sbody"><div class="field"><label>Topic</label><input id="aiTopic" placeholder="e.g. Chronic cough: practical clinical reasoning"></div><div class="row"><div class="field"><label>Audience</label><input id="aiAudience" placeholder="e.g. Area Business Managers"></div><div class="field"><label>Duration (minutes)</label><input id="aiDuration" type="number" min="3" max="240" value="20"></div></div><div class="field"><label>Learning objectives <span>One per line</span></label><textarea id="aiObjectives" placeholder="Define...
@@ -51,7 +51,7 @@ function bindPreviewInteractions(c){
   if($('#checkAnswer'))$('#checkAnswer').onclick=()=>{if(!previewState[c.id]||previewState[c.id].choice===undefined){toast('Select an answer first');return}previewState[c.id].checked=true;renderPreview(false);updateNext()};
   if($('#flipBtn'))$('#flipBtn').onclick=()=>{previewState[c.id]=Object.assign(previewState[c.id]||{},{flipped:true});renderPreview(false);updateNext()};
   if($('#flipBack'))$('#flipBack').onclick=()=>{$('#flipInner').classList.remove('flipped')};
-  if(c.type==='voice'){let v=previewState[c.id]||(previewState[c.id]={}),SR=window.SpeechRecognition||window.webkitSpeechRecognition;if($('#voiceStart'))$('#voiceStart').onclick=()=>{if(!SR){toast('Voice recognition is unavailable. Use the typing fallback.');return}let r=new SR();r.lang='en-IN';r.interimResults=false;r.maxAlternatives=1;r.onstart=()=>{v.listening=true;renderPreview(false)};r.onresult=e=>{v.listening=false;v.transcript=e.results[0][0].transcript;evaluateVoice(c,v);renderPreview(false);updateNext()};r.onerror=()=>{v.listening=false;v.result='Voice recognition error. Use the typing fallback.';renderPreview(false)};r.onend=()=>{v.listening=false};r.start()};if($('#voiceCheck'))$('#voiceCheck').onclick=()=>{v.typed=$('#voiceTyped').value;v.transcript=v.typed;evaluateVoice(c,v);renderPreview(false);updateNext()}}if(c.type==='voice'){let v=S.voice[c.id]||{};return '<div class="eye">'+E(c.eyebrow)+'</div><h1>'+E(c.title)+'</h1><div class="rich">'+E(c.question)+'</div><div class="voicePanel"><button class="voiceMic" id="voiceStart">🎙</button><div class="voiceStatus">Tap to speak</div><div class="voiceTranscript">'+E(v.transcript||'Your transcript will appear here.')+'</div>'+(c.voiceFallback!==false?'<textarea id="voiceTyped" placeholder="Type instead if voice is unavailable…" style="width:100%;margin-top:9px;min-height:70px;border:1px solid #dde2eb;border-radius:10px;padding:9px">'+E(v.typed||'')+'</textarea><button class="btn primary" id="voiceCheck" style="margin-top:7px">Evaluate response</button>':'')+(v.result?'<div class="voiceScore">'+E(v.result)+'</div>':'')+'</div>'}$$('[data-check]').forEach(x=>x.onchange=()=>{let s=previewState[c.id]||(previewState[c.id]={checked:[]});s.checked=s.checked||[];s.checked[+x.dataset.check]=x.checked;renderPreview(false);updateNext()});
+  if(c.type==='voice'){let v=previewState[c.id]||(previewState[c.id]={}),SR=window.SpeechRecognition||window.webkitSpeechRecognition;if($('#voiceStart'))$('#voiceStart').onclick=()=>{if(!SR){toast('Voice recognition is unavailable. Use the typing fallback.');return}let r=new SR();r.lang='en-IN';r.interimResults=false;r.maxAlternatives=1;r.onstart=()=>{v.listening=true;renderPreview(false)};r.onresult=e=>{v.listening=false;v.transcript=e.results[0][0].transcript;evaluateVoice(c,v);renderPreview(false);updateNext()};r.onerror=()=>{v.listening=false;v.result='Voice recognition error. Use the typing fallback.';renderPreview(false)};r.onend=()=>{v.listening=false};r.start()};if($('#voiceCheck'))$('#voiceCheck').onclick=()=>{v.typed=$('#voiceTyped').value;v.transcript=v.typed;evaluateVoice(c,v);renderPreview(false);updateNext()}}$$('[data-check]').forEach(x=>x.onchange=()=>{let s=previewState[c.id]||(previewState[c.id]={checked:[]});s.checked=s.checked||[];s.checked[+x.dataset.check]=x.checked;renderPreview(false);updateNext()});
 }
 function updateNext(){let c=showing(),i=state.cards.indexOf(c),ready=remaining<=0&&interactionReady(c);$('#next').disabled=!ready;$('#next').textContent=i===state.cards.length-1?'Finish':'Next ->';let show=c.showTimer===null?state.course.showCountdown:c.showTimer;$('#timer').textContent=show&&remaining>0?'Continue in '+remaining+'s':''}
 function startCardTimer(){clearInterval(cardTimer);let c=showing();remaining=c.timerMode==='off'?0:Math.max(3,Math.min(300,c.timerMode==='default'?Number(state.course.defaultMinSeconds):Number(c.minSeconds)));remaining=Number.isFinite(remaining)?remaining:5;updateNext();cardTimer=setInterval(()=>{remaining--;if(remaining<=0){remaining=0;clearInterval(cardTimer)}updateNext()},1000)}
@@ -65,7 +65,7 @@ function redo(){if(!future.length)return;history.push(clone(state));state=future
 function safe(s){return(s||'course').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,70)||'course'}
 function download(data,name,type){let a=document.createElement('a');a.href=URL.createObjectURL(data instanceof Blob?data:new Blob([data],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000)}
 function saveProject(){download(JSON.stringify(state,null,2),safe(state.course.title)+'.cardcraft.json','application/json');saveLocal();toast('Editable project downloaded')}
-async function openProject(f){try{state=normalize(JSON.parse(await f.text()));history=[];future=[];previewState={};saveLocal();render();startCardTimer();toast('Project opened')}catch(e){toast(e.message)}}
+async function openProject(f){try{ccOpenText(await f.text())}catch(e){ccShowError(e.message)}}
 function validate(){let errs=[],warn=[];state.cards.forEach((c,i)=>{if(!c.title.trim())warn.push('Card '+(i+1)+' has no heading.');if(c.type==='image'&&!c.image)errs.push('Card '+(i+1)+' requires an image.');if(c.image&&!c.alt)warn.push('Card '+(i+1)+' image needs alternative text.');if(['mcq','tf'].includes(c.type)&&(c.options.length<2||c.correct>=c.options.length))errs.push('Card '+(i+1)+' has an invalid question.');if(c.type==='checklist'&&!c.checkItems.length)errs.push('Card '+(i+1)+' needs checklist items.')});return{errs,warn}}
 function learnerDoc(scorm){let data=JSON.stringify({course:state.course,theme:state.theme,cards:state.cards}).replace(/</g,'\\u003c');return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(state.course.title)}</title><style>
 :root{--b:${state.theme.primary};--bg:${state.theme.background}}*{box-sizing:border-box}html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#172033;background:var(--bg)}button{font:inherit;cursor:pointer}.app{height:100%;max-width:780px;margin:auto;display:grid;grid-template-rows:auto 1fr auto;position:relative}.top,.bottom{padding:14px 18px;background:#ffffffd8;display:flex;gap:10px;align-items:center}.top b{max-width:220px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.progress{height:6px;background:#0002;border-radius:99px;flex:1;overflow:hidden}.fill{height:100%;background:var(--b)}main{min-height:0;overflow:auto;padding:22px 18px;display:grid;align-items:start;justify-items:center}.card{width:100%;background:#fff;border-radius:23px;padding:27px;box-shadow:0 14px 40px #17203320}.card.key{border-left:7px solid var(--b);background:linear-gradient(145deg,#fff,#f8f7ff)}.eye{color:var(--b);font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;margin-bottom:11px}h1{font-size:29px;line-height:1.15;margin:0 0 15px}.rich{line-height:1.6}.mediaLayout{display:grid;gap:17px;align-items:center}.mediaLayout.left,.mediaLayout.right{grid-template-columns:42% 1fr}.mediaLayout.right .media,.mediaLayout.bottom .media{order:2}.media img{width:100%;max-height:350px;object-fit:cover;border-radius:16px}.media.contain img{object-fit:contain}.backgroundCard{min-height:420px;background-size:cover;background-position:center;position:relative;color:#fff;padding:20px;border-radius:16px;overflow:hidden}.backgroundCard:before{content:'';position:absolute;inset:0;background:#0008}.backgroundCard>*{position:relative}.qm{font:70px/.5 Georgia,serif;color:var(--b);opacity:.35}.quote{font:700 26px/1.4 Georgia,serif}.by{margin-top:14px;color:#667085}.answers,.checklist{display:grid;gap:9px;margin-top:16px}.answer,.checkitem{padding:11px;text-align:left;border:1px solid #dde2eb;border-radius:10px;background:#fff}.answer.sel{border-color:var(--b);background:#f3f3ff}.answer.good{border-color:#15945a;background:#eaf8f1}.answer.bad{border-color:#cf4035;background:#fff0ef}.answer.good.reveal{border-style:dashed}.checkitem.good{border-color:#15945a;background:#eaf8f1}.checkitem.bad{border-color:#cf4035;background:#fff0ef}.checkitem.good.reveal{border-style:dashed}.answer.correct.reveal{border-style:dashed}.checkitem.correct{border-color:#23a46b;background:#eaf8f1}.checkitem.wrong{border-color:#de554a;background:#fff0ef}.checkitem.correct.reveal{border-style:dashed}.revealLine{margin-top:8px;font-weight:700;font-size:13px;color:#23a46b}.checkitem{display:flex;gap:9px}.feedback{margin-top:12px;padding:10px;border-radius:10px;background:#f5f6f8}.primary,.secondary{border-radius:10px;padding:10px 14px;font-weight:800}.primary{border:0;background:var(--b);color:#fff}.secondary{border:1px solid #dde2eb;background:#fff}.bottom{justify-content:space-between}.bottom button:disabled{opacity:.35}.flipScene{perspective:1000px;min-height:350px}.flipInner{position:relative;min-height:350px;transform-style:preserve-3d;transition:transform .55s}.flipInner.flipped{transform:rotateY(180deg)}.flipFace{position:absolute;inset:0;backface-visibility:hidden}.flipBack{transform:rotateY(180deg)}.anim-fade{animation:fade .25s}.anim-slide-h{animation:sh .28s}.anim-slide-v{animation:sv .28s}.anim-scale{animation:sc .25s}@keyframes fade{from{opacity:.1}}@keyframes sh{from{opacity:.2;transform:translateX(30px)}}@keyframes sv{from{opacity:.2;transform:translateY(25px)}}@keyframes sc{from{opacity:.2;transform:scale(.96)}}@media(max-width:600px){.mediaLayout.left,.mediaLayout.right{grid-template-columns:1fr}.mediaLayout.right .media{order:0}.card{padding:21px}} .navHint{position:fixed;z-index:9;width:38px;height:38px;border-radius:50%;border:1px solid #dde2eb;background:#ffffffdf;color:var(--b);display:grid;place-items:center;font-size:25px;font-weight:900;box-shadow:0 4px 14px #0002;pointer-events:none}.navHint.left{left:10px;top:50%}.navHint.right{right:10px;top:50%}.navHint.up{top:58px;left:50%}.navHint.down{bottom:66px;left:50%}.swipeHelp{position:fixed;left:50%;bottom:70px;transform:translateX(-50%);z-index:9;background:#172033dd;color:#fff;padding:7px 11px;border-radius:99px;font-size:10px}.imageCaption{font-size:12px;color:#667085;margin-top:7px;text-align:center}.imageCaption.left{text-align:left}.imageCaption.right{text-align:right}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}</style></head><body><span class="navHint left" id="hL">‹</span><span class="navHint right" id="hR">›</span><span class="navHint up" id="hU">⌃</span><span class="navHint down" id="hD">⌄</span><span class="swipeHelp" id="hHelp">Swipe or drag to continue</span><div class="app"><div class="top"><b id="title"></b><div class="progress"><div class="fill" id="fill"></div></div></div><main id="main"><article class="card" id="card"></article></main><div class="bottom"><button class="secondary" id="back">Back</button><span id="count"></span><span id="timer"></span><button class="primary" id="next">Next</button></div></div><script>
@@ -661,6 +661,58 @@ function ccxFactory(){
   }
 
 
+
+  /* ---------- voice response card (spoken or typed) ---------- */
+  function voiceMax(c){var m=c.voiceMaxAttempts;return m==null?3:(Number(m)||0)}
+  function voiceReady(c,v){v=v||{};return !!(v.checked&&(v.passed||v.done))}
+  function voiceEval(c,v,text){
+    if(v.done)return v;
+    var tx=String(text||'').toLowerCase(),keys=arr(c.voiceKeywords).map(function(x){return String(x).toLowerCase()}).filter(Boolean);
+    var hits=keys.filter(function(k){return tx.indexOf(k)>-1}),need=Math.min(num(c.voiceMinKeywords,1),Math.max(1,keys.length)),max=voiceMax(c);
+    v.transcript=String(text||'');v.attempts=(v.attempts||0)+1;v.passed=hits.length>=need;v.checked=true;v.done=v.passed||(max>0&&v.attempts>=max);
+    var base=hits.length+'/'+keys.length+' key ideas found';
+    if(v.passed)v.result=base+' \u2014 '+(c.voicePassFeedback||'Good response.');
+    else{var left=max-v.attempts;v.result=base+' \u2014 '+(c.voiceRetryFeedback||'Try again and include the key ideas.')+(v.done?' You have used all your tries, so you can continue.':(max>0?' ('+left+' '+(left===1?'try':'tries')+' left)':''))}
+    return v;
+  }
+  function voiceRender(c,v,o){
+    v=v||{};o=o||{};var E=o.E||esc,done=!!v.done;
+    var h=o.preview?'<div class="eyebrow">'+E(c.eyebrow)+'</div><h3>'+E(c.title)+'</h3>':'<div class="eye">'+E(c.eyebrow)+'</div><h1>'+E(c.title)+'</h1>';
+    if(c.html&&String(c.html).replace(/<[^>]*>/g,'').trim())h+='<div class="rich">'+(o.preview&&o.sanitize?o.sanitize(c.html):c.html)+'</div>';
+    if(c.question)h+='<div class="rich ccx-q">'+E(c.question)+'</div>';
+    h+='<div class="voicePanel">';
+    if(!done)h+='<button type="button" class="voiceMic'+(v.listening?' listening':'')+'" id="voiceStart" aria-label="Start speaking">&#127897;</button><div class="voiceStatus" data-vstatus>'+(v.listening?'Listening\u2026':'Tap the microphone and speak')+'</div>';
+    h+='<div class="voiceTranscript" data-vtrans>'+E(v.transcript||'Your answer will appear here.')+'</div>';
+    if(v.result)h+='<div class="voiceScore'+(v.passed?'':' warn')+'">'+E(v.result)+'</div>';
+    if(!done&&c.voiceFallback!==false)h+='<textarea id="voiceTyped" class="ccx-vtext" placeholder="Or type your answer here\u2026">'+E(v.typed||'')+'</textarea><button type="button" class="'+(o.preview?'btn ':'')+'primary" id="voiceCheck" style="margin-top:8px">Check my answer</button>';
+    return h+'</div>';
+  }
+  function voiceBind(root,c,v,api){
+    if(!root)return;
+    var SRc=(typeof window!=='undefined')?(window.SpeechRecognition||window.webkitSpeechRecognition):null;
+    var mic=q(root,'#voiceStart'),chk=q(root,'#voiceCheck'),ta=q(root,'#voiceTyped'),st=q(root,'[data-vstatus]');
+    if(mic)mic.onclick=null;if(chk)chk.onclick=null;
+    function say(m){if(st)st.textContent=m}
+    function fin(text,typed){
+      if(!text||!String(text).replace(/\s+/g,'').length){if(api.alert)api.alert('Please say or type your answer first.');return}
+      if(typed)v.typed=String(text);
+      voiceEval(c,v,text);v.listening=false;
+      if(api.respond)api.respond({question:c.question||c.title,response:String(text),result:v.passed?'correct':'wrong',points:0});
+      if(api.changed)api.changed();if(api.save)api.save();
+    }
+    if(mic)mic.addEventListener('click',function(){
+      if(!SRc){say('Voice recognition is not available in this browser. Please type your answer below.');if(ta&&ta.focus)ta.focus();return}
+      var r;try{r=new SRc()}catch(e){say('Voice recognition could not start. Please type your answer below.');return}
+      r.lang=c.voiceLang||'en-IN';r.interimResults=false;r.maxAlternatives=1;
+      r.onstart=function(){v.listening=true;mic.classList.add('listening');say('Listening\u2026')};
+      r.onresult=function(e){fin(e.results[0][0].transcript,false)};
+      r.onerror=function(e){v.listening=false;mic.classList.remove('listening');var er=e&&e.error;say(er==='not-allowed'||er==='service-not-allowed'?'Microphone access is blocked. Please allow it, or type your answer below.':er==='no-speech'?'I did not hear anything. Tap the microphone and try again.':'Voice recognition did not work. Please type your answer below.')};
+      r.onend=function(){v.listening=false;mic.classList.remove('listening')};
+      try{r.start()}catch(e){say('Voice recognition could not start. Please type your answer below.')}
+    });
+    if(chk)chk.addEventListener('click',function(){fin(ta?ta.value:'',true)});
+  }
+
   /* ---------- authoring operations (pure, used by the editors) ---------- */
   function r1(v){return Math.round(v*10)/10}
   var ops={
@@ -700,7 +752,7 @@ function ccxFactory(){
   return{types:T,isX:isX,scored:scored,defaults:defaults,render:render,bind:bind,ready:ready,points:points,
     inside:inside,hsEval:hsEval,hsTap:hsTap,sortEval:sortEval,sortAssign:sortAssign,orderEval:orderEval,shuffled:shuffled,reorderIndex:reorderIndex,move:move,
     award:award,finish:finish,sceneHTML:sceneHTML,chatHTML:chatHTML,SCENES:SCENES,AVATARS:AVATARS,pairRender:pairRender,pairBind:pairBind,uniq:uniq,
-    cps:cps,cpBlocking:cpBlocking,videoBind:videoBind,esc:esc,PALETTE:PALETTE,ops:ops};
+    cps:cps,cpBlocking:cpBlocking,videoBind:videoBind,esc:esc,PALETTE:PALETTE,ops:ops,voiceEval:voiceEval,voiceReady:voiceReady,voiceRender:voiceRender,voiceBind:voiceBind,voiceMax:voiceMax};
 }
 const CCXI=ccxFactory();
 const CC_CCX_CSS=`.ccx-q{margin-bottom:6px}
@@ -819,10 +871,20 @@ const CC_CCX_CSS=`.ccx-q{margin-bottom:6px}
 .ccx-mk{font-size:12px;font-weight:700;margin-top:4px}
 .ccx-mk.ok{color:#15945a}
 .ccx-mk.bad{color:#cf4035}
-.ccx-fix{display:block;font-weight:700;color:#15945a;font-size:12px;margin-top:2px}`;
+.ccx-fix{display:block;font-weight:700;color:#15945a;font-size:12px;margin-top:2px}
+.voicePanel{border:1px solid #dde2eb;border-radius:16px;padding:16px;background:linear-gradient(145deg,#fff,#f6f7ff);text-align:center;margin:14px 0;color:#172033}
+.voiceMic{width:74px;height:74px;border-radius:50%;border:0;background:var(--b,var(--brand,#0E7C86));color:#fff;font-size:32px;line-height:1;box-shadow:0 6px 16px rgba(23,32,51,.25);cursor:pointer}
+.voiceMic.listening{animation:ccxVoicePulse 1.1s infinite}
+@keyframes ccxVoicePulse{0%,100%{box-shadow:0 0 0 0 rgba(21,148,90,.55)}50%{box-shadow:0 0 0 16px rgba(21,148,90,0)}}
+.voiceStatus{font-size:13px;font-weight:800;margin:10px 0 6px}
+.voiceTranscript{min-height:54px;padding:10px 12px;border-radius:10px;background:#f7f8fa;border:1px solid #dde2eb;font-size:14px;text-align:left;line-height:1.45}
+.voiceScore{margin-top:10px;padding:10px 12px;border-radius:10px;background:#eaf8f1;color:#14532d;font-size:13px;font-weight:700;text-align:left}
+.voiceScore.warn{background:#fff4e5;color:#92400e}
+.ccx-vtext{width:100%;margin-top:10px;min-height:76px;border:1px solid #cfd6e2;border-radius:10px;padding:10px;font:inherit;font-size:15px;box-sizing:border-box;color:#172033}`;
 const CC_CCX_GLUE=`(function(){
 var prevContent=content,prevBind=bind,prevReady=ready;
 function st(c){return S.answers[c.id]||(S.answers[c.id]={})}
+function vst(c){return S.voice[c.id]||(S.voice[c.id]={})}
 function api(c){return{
   changed:function(){render(false)},
   soft:function(){buttons();save()},
@@ -833,6 +895,7 @@ function api(c){return{
 content=function(c){
   var a=S.answers[c.id]||{};
   if(CCX.isX(c.type))return CCX.render(c,a,{});
+  if(c.type==='voice')return CCX.voiceRender(c,S.voice[c.id]||{},{E:E});
   if(c.type==='match'&&c.matchStyle==='tap')return CCX.pairRender(c,a,{E:E,checkId:'finalCheckMatch'});
   var h=prevContent(c);
   if((c.type==='scenario'||c.type==='consequence')&&c.sceneOn){
@@ -845,11 +908,13 @@ bind=function(c){
   prevBind(c);
   var root=document.getElementById('card');
   if(CCX.isX(c.type)){CCX.bind(root,c,st(c),api(c));return}
+  if(c.type==='voice'){CCX.voiceBind(root,c,vst(c),api(c));return}
   if(c.type==='match'&&c.matchStyle==='tap'){CCX.pairBind(root,c,st(c),api(c),'finalCheckMatch');return}
   if(c.type==='video'&&CCX.cps(c).length){var v=document.getElementById('ccVideo');if(v)CCX.videoBind(v,c,st(c),api(c))}
 };
 ready=function(c){
   if(CCX.isX(c.type))return remain<=0&&CCX.ready(c,S.answers[c.id]);
+  if(c.type==='voice')return remain<=0&&CCX.voiceReady(c,S.voice[c.id]);
   if(c.type==='video'&&CCX.cpBlocking(c,S.answers[c.id]))return false;
   return prevReady(c);
 };
@@ -864,9 +929,9 @@ TYPES.flipgrid=['Flip tiles','Tap tiles to flip and reveal'];
 const _baseCCX=base;base=function(type='text',defaultTime=5){let c=_baseCCX(CCXI.isX(type)?'text':type,defaultTime);if(CCXI.isX(type)){c.type=type;Object.assign(c,CCXI.defaults(type))}return c};
 /* ---- preview ---- */
 function ccxApiPreview(c){return{changed:()=>{renderPreview(false);updateNext()},soft:()=>updateNext(),save:()=>{},alert:m=>toast(m),respond:()=>{}}}
-const _cardContentCCX=cardContent;cardContent=function(c){if(CCXI.isX(c.type))return CCXI.render(c,previewState[c.id]||(previewState[c.id]={}),{preview:true,sanitize});if(c.type==='match'&&c.matchStyle==='tap')return CCXI.pairRender(c,previewState[c.id]||{},{E:esc,preview:true,checkId:'p32CheckMatch'});let h=_cardContentCCX(c);if((c.type==='scenario'||c.type==='consequence')&&c.sceneOn){let sc=CCXI.sceneHTML(c,esc);h=h.replace('</h3>',m=>m+sc)}return h};
-const _bindPreviewCCX=bindPreviewInteractions;bindPreviewInteractions=function(c){_bindPreviewCCX(c);let root=$('#pCard');if(CCXI.isX(c.type))CCXI.bind(root,c,previewState[c.id]||(previewState[c.id]={}),ccxApiPreview(c));else if(c.type==='match'&&c.matchStyle==='tap')CCXI.pairBind(root,c,previewState[c.id]||(previewState[c.id]={matches:{},attempts:0}),ccxApiPreview(c),'p32CheckMatch');else if(c.type==='video'&&CCXI.cps(c).length){let v=$('#v33Preview');if(v)CCXI.videoBind(v,c,previewState[c.id]||(previewState[c.id]={percent:0,maxTime:0,checked:!c.videoRequired}),ccxApiPreview(c))}};
-const _irCCX=interactionReady;interactionReady=function(c){if(CCXI.isX(c.type))return CCXI.ready(c,previewState[c.id]||{});if(c.type==='video'&&CCXI.cpBlocking(c,previewState[c.id]))return false;return _irCCX(c)};
+const _cardContentCCX=cardContent;cardContent=function(c){if(c.type==='voice')return CCXI.voiceRender(c,previewState[c.id]||{},{E:esc,preview:true,sanitize});if(CCXI.isX(c.type))return CCXI.render(c,previewState[c.id]||(previewState[c.id]={}),{preview:true,sanitize});if(c.type==='match'&&c.matchStyle==='tap')return CCXI.pairRender(c,previewState[c.id]||{},{E:esc,preview:true,checkId:'p32CheckMatch'});let h=_cardContentCCX(c);if((c.type==='scenario'||c.type==='consequence')&&c.sceneOn){let sc=CCXI.sceneHTML(c,esc);h=h.replace('</h3>',m=>m+sc)}return h};
+const _bindPreviewCCX=bindPreviewInteractions;bindPreviewInteractions=function(c){_bindPreviewCCX(c);let root=$('#pCard');if(c.type==='voice')CCXI.voiceBind(root,c,previewState[c.id]||(previewState[c.id]={}),ccxApiPreview(c));else if(CCXI.isX(c.type))CCXI.bind(root,c,previewState[c.id]||(previewState[c.id]={}),ccxApiPreview(c));else if(c.type==='match'&&c.matchStyle==='tap')CCXI.pairBind(root,c,previewState[c.id]||(previewState[c.id]={matches:{},attempts:0}),ccxApiPreview(c),'p32CheckMatch');else if(c.type==='video'&&CCXI.cps(c).length){let v=$('#v33Preview');if(v)CCXI.videoBind(v,c,previewState[c.id]||(previewState[c.id]={percent:0,maxTime:0,checked:!c.videoRequired}),ccxApiPreview(c))}};
+const _irCCX=interactionReady;interactionReady=function(c){if(c.type==='voice')return CCXI.voiceReady(c,previewState[c.id]);if(CCXI.isX(c.type))return CCXI.ready(c,previewState[c.id]||{});if(c.type==='video'&&CCXI.cpBlocking(c,previewState[c.id]))return false;return _irCCX(c)};
 const _psCCX=previewScore;previewScore=function(){let r=_psCCX(),ex=0,mx=0;state.cards.forEach(c=>{if(CCXI.scored(c)){let p=CCXI.points(c,previewState[c.id]);ex+=p.earned;mx+=p.max}});let earned=r.earned+ex,total=r.total+mx;return{earned,total,percent:total?Math.round(earned/total*100):100}};
 const _validateCCX=validate;validate=function(){let v=_validateCCX();state.cards.forEach((c,i)=>CCXI.ops.problems(c,i+1).forEach(m=>v.errs.push(m)));return v};
 const _narrationTextCCX=narrationText;narrationText=function(c){if(CCXI.isX(c.type))return[c.eyebrow,c.title,c.question].filter(Boolean).join('. ');return _narrationTextCCX(c)};
@@ -902,9 +967,10 @@ function ccxEditScene(c,host){let on=!!c.sceneOn,style=c.sceneStyle||'chat',L=c.
  if(style==='chat'){$('#ccxLCol').onchange=e=>change(()=>(c.sceneLeft=c.sceneLeft||{}).color=e.target.value);$('#ccxRCol').onchange=e=>change(()=>(c.sceneRight=c.sceneRight||{}).color=e.target.value)}
  else{$('#ccxSceneBg').onchange=e=>change(()=>c.sceneBg=e.target.value);let si=$('#ccxSceneImg');if(si)si.onchange=e=>ccxReadImg(e.target.files[0],d=>change(()=>c.sceneBgImage=d));$('#ccxLEm').onchange=e=>change(()=>(c.sceneLeft=c.sceneLeft||{}).emoji=e.target.value);$('#ccxREm').onchange=e=>change(()=>(c.sceneRight=c.sceneRight||{}).emoji=e.target.value)}
  host.querySelectorAll('[data-lwho]').forEach(e=>e.onchange=()=>change(()=>c.sceneLines[+e.dataset.lwho].who=e.value));host.querySelectorAll('[data-ltext]').forEach(e=>e.onchange=()=>change(()=>c.sceneLines[+e.dataset.ltext].text=e.value));host.querySelectorAll('[data-ldel]').forEach(b=>b.onclick=()=>change(()=>CCXI.ops.delLine(c,+b.dataset.ldel)));$('#ccxAddLine').onclick=()=>change(()=>CCXI.ops.addLine(c))}
+function ccxEditVoice(c,host){host.insertAdjacentHTML('beforeend',`<div class="section"><div class="stitle">Voice attempts</div><div class="sbody"><div class="field"><label>Learner can continue after <span>so nobody gets stuck on this card</span></label><select id="ccxVoiceMax"><option value="1">1 try</option><option value="2">2 tries</option><option value="3">3 tries</option><option value="5">5 tries</option><option value="0">Only when the answer passes</option></select></div><div class="hint">The microphone and a typing box are always offered, so learners whose phone blocks the microphone can still answer.</div></div></div>`);$('#ccxVoiceMax').value=String(c.voiceMaxAttempts==null?3:c.voiceMaxAttempts);$('#ccxVoiceMax').onchange=e=>change(()=>c.voiceMaxAttempts=Number(e.target.value))}
 function ccxEditPair(c,host){host.insertAdjacentHTML('beforeend',`<div class="section"><div class="stitle">Answer style</div><div class="sbody"><div class="field"><label>How learners answer</label><select id="ccxPairStyle"><option value="dropdown">Dropdown for each item</option><option value="tap">Tap to pair (tap an item, then its answer)</option></select></div><label class="check" style="display:block;margin-top:8px"><input id="ccxMatchReveal" type="checkbox" ${c.revealAnswer?'checked':''}> Show the correct answers after the final attempt</label></div></div>`);$('#ccxPairStyle').value=c.matchStyle||'dropdown';$('#ccxPairStyle').onchange=e=>change(()=>c.matchStyle=e.target.value);$('#ccxMatchReveal').onchange=e=>change(()=>c.revealAnswer=e.target.checked)}
 function ccxEditCheckpoints(c,host){let list=c.checkpoints||[];host.insertAdjacentHTML('beforeend',`<div class="section"><div class="stitle">Checkpoint questions (optional)</div><div class="sbody"><div class="hint">The video pauses at each time and asks a question. Works with uploaded or hosted MP4 files.</div><div id="ccxCps">${list.map((k,i)=>`<div class="ccx-cpbox"><div class="ccx-edrow"><b>${i+1}</b><label style="display:flex;gap:6px;align-items:center">At <input data-cptime="${i}" type="number" min="0" style="width:80px" value="${Number(k.time)||0}"> seconds</label><button class="mini" type="button" data-cpdel="${i}" style="margin-left:auto">×</button></div><input data-cpq="${i}" placeholder="Question" value="${esc(k.question||'')}"><textarea data-cpopts="${i}" placeholder="Answer options, one per line">${esc((k.options||[]).join('\n'))}</textarea><div class="row"><div class="field"><label>Correct answer</label><select data-cpcor="${i}">${(k.options||[]).map((o,n)=>`<option value="${n}" ${Number(k.correct)===n?'selected':''}>${n+1}. ${esc(o)}</option>`).join('')}</select></div><div class="field"><label>Feedback</label><input data-cpfb="${i}" value="${esc(k.feedback||'')}"></div></div></div>`).join('')}</div><button class="btn" type="button" id="ccxAddCp">＋ Add checkpoint</button><label class="check" style="display:block;margin-top:10px"><input id="ccxCpReq" type="checkbox" ${c.checkpointsRequired!==false?'checked':''}> Learner must answer every checkpoint to continue</label></div></div>`);const q1=(s,fn)=>host.querySelectorAll(s).forEach(fn);q1('[data-cptime]',e=>e.onchange=()=>change(()=>c.checkpoints[+e.dataset.cptime].time=Math.max(0,Number(e.value)||0)));q1('[data-cpq]',e=>e.onchange=()=>change(()=>c.checkpoints[+e.dataset.cpq].question=e.value));q1('[data-cpopts]',e=>e.onchange=()=>change(()=>CCXI.ops.setOptions(c.checkpoints[+e.dataset.cpopts],e.value)));q1('[data-cpcor]',e=>e.onchange=()=>change(()=>c.checkpoints[+e.dataset.cpcor].correct=+e.value));q1('[data-cpfb]',e=>e.onchange=()=>change(()=>c.checkpoints[+e.dataset.cpfb].feedback=e.value));q1('[data-cpdel]',b=>b.onclick=()=>change(()=>CCXI.ops.delCheckpoint(c,+b.dataset.cpdel)));$('#ccxAddCp').onclick=()=>change(()=>CCXI.ops.addCheckpoint(c));$('#ccxCpReq').onchange=e=>change(()=>c.checkpointsRequired=e.target.checked)}
-const _renderEditorCCX=renderEditor;renderEditor=function(){_renderEditorCCX();let c=sel(),host=$('#editor');if(!c||!host)return;if(CCXI.isX(c.type))ccxEditX(c,host);if(c.type==='scenario'||c.type==='consequence')ccxEditScene(c,host);if(c.type==='match')ccxEditPair(c,host);if(c.type==='video')ccxEditCheckpoints(c,host)};
+const _renderEditorCCX=renderEditor;renderEditor=function(){_renderEditorCCX();let c=sel(),host=$('#editor');if(!c||!host)return;if(CCXI.isX(c.type))ccxEditX(c,host);if(c.type==='scenario'||c.type==='consequence')ccxEditScene(c,host);if(c.type==='match')ccxEditPair(c,host);if(c.type==='voice')ccxEditVoice(c,host);if(c.type==='video')ccxEditCheckpoints(c,host)};
 /* ---- rich text: text size + tables ---- */
 const CC_SIZES=[['Small',0.85],['Normal',1],['Large',1.3],['X-Large',1.7],['Huge',2.3]];
 const _richEditorCC=richEditor;richEditor=function(id,value){let h=_richEditorCC(id,value),k=h.indexOf('</div><div class="richEdit"');return k<0?h:h.slice(0,k)+'<button class="tool" type="button" data-ccmenu="size" title="Text size">Size ▾</button><button class="tool" type="button" data-ccmenu="table" title="Table">▦ Table ▾</button>'+h.slice(k)};
@@ -1327,6 +1393,367 @@ setTimeout(()=>{let st=document.createElement('style');st.textContent=`
 const _val42=validate;validate=function(){let v=_val42();state.cards.forEach((c,i)=>{if(c.type==='reflection'&&!c.reflectionPlaceholder)v.warn.push('Reflection card '+(i+1)+' should have a learner prompt.');if(['mcq','mrq'].includes(c.type)&&c.options.length>10)v.errs.push('Assessment card '+(i+1)+' has more than 10 options.');if(c.type==='mrq'&&(!Array.isArray(c.correctMultiple)||!c.correctMultiple.length))v.errs.push('MRQ card '+(i+1)+' needs at least one correct answer.');});return v};
 
 init();
+
+/* ===================================================================
+   Simple JSON import (4.5.0)
+   Lets Studio open plain, AI-written course JSON (no internal settings)
+   as well as its own full project files. Converts to a normal project.
+   =================================================================== */
+const CC_SIMPLE=(function(){
+  function low(s){return String(s==null?'':s).toLowerCase().replace(/[^a-z0-9]/g,'')}
+  const ALIAS={cover:'cover',title:'cover',titlecard:'cover',intro:'cover',introduction:'cover',welcome:'cover',
+    text:'text',content:'text',lesson:'text',info:'text',information:'text',textcard:'text',concept:'text',
+    imagetext:'image',textimage:'image',image:'image',picture:'image',imagecard:'image',infographic:'image',
+    keymessage:'key',key:'key',quote:'key',keypoint:'key',takeaway:'key',highlight:'key',remember:'key',
+    flashcard:'flash',flash:'flash',flip:'flash',flipcard:'flash',video:'video',
+    mcq:'mcq',multiplechoice:'mcq',singlechoice:'mcq',singleselect:'mcq',quiz:'mcq',question:'mcq',knowledgecheck:'mcq',
+    truefalse:'tf',tf:'tf',
+    multipleresponse:'mrq',mrq:'mrq',multiselect:'mrq',selectall:'mrq',multipleanswer:'mrq',
+    match:'match',matching:'match',matchthefollowing:'match',
+    scenario:'scenario',scenariodecision:'scenario',decision:'scenario',branching:'scenario',scenariochoice:'scenario',
+    consequence:'consequence',scenarioconsequence:'consequence',outcome:'consequence',scenariooutcome:'consequence',
+    checklist:'checklist',reflection:'reflection',reflect:'reflection',
+    order:'order',ordering:'order',sequence:'order',sequencing:'order',
+    sort:'sort',sorting:'sort',categorize:'sort',categorise:'sort',classify:'sort',
+    flipgrid:'flipgrid',fliptiles:'flipgrid',tiles:'flipgrid',
+    hotspot:'hotspot',pins:'pins',explore:'pins',voice:'voice',voiceresponse:'voice',speak:'voice',
+    results:'results',result:'results',score:'results',
+    completion:'completion',complete:'completion',summary:'completion',end:'completion',finish:'completion',conclusion:'completion',thankyou:'completion'};
+  const NAMES={cover:'Cover',text:'Text',image:'Image + text',key:'Key message',flash:'Flashcard',video:'Video',mcq:'Multiple choice',tf:'True / false',mrq:'Multiple response',match:'Match',scenario:'Scenario',consequence:'Outcome',checklist:'Checklist',reflection:'Reflection',order:'Put in order',sort:'Sort',flipgrid:'Flip tiles',hotspot:'Hotspot',pins:'Pins',voice:'Voice response',results:'Results',completion:'Completion'};
+  function pick(o,keys){if(!o||typeof o!=='object')return undefined;for(let i=0;i<keys.length;i++){const v=o[keys[i]];if(v!==undefined&&v!==null&&v!=='')return v}return undefined}
+  function str(v,d){return v===undefined||v===null?(d===undefined?'':d):String(v)}
+  function eh(t){return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+  function inline(t){return eh(t).replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/(^|[^*])\*([^*\s][^*]*)\*/g,'$1<em>$2</em>')}
+  function htmlOf(v){
+    if(v===undefined||v===null||v==='')return '';
+    if(Array.isArray(v)){const it=v.map(x=>typeof x==='string'||typeof x==='number'?String(x):(x&&(x.text||x.label||x.title))||'').filter(Boolean);if(!it.length)return '';return it.length===1?'<p>'+inline(it[0])+'</p>':'<ul>'+it.map(x=>'<li>'+inline(x)+'</li>').join('')+'</ul>'}
+    return String(v).replace(/\r/g,'').split(/\n{2,}/).map(b=>b.trim()).filter(Boolean).map(b=>{const ls=b.split('\n');
+      if(ls.every(l=>/^\s*([-*\u2022]|\d+[.)])\s+/.test(l)))return '<ul>'+ls.map(l=>'<li>'+inline(l.replace(/^\s*([-*\u2022]|\d+[.)])\s+/,''))+'</li>').join('')+'</ul>';
+      return '<p>'+ls.map(inline).join('<br>')+'</p>'}).join('');
+  }
+  function plain(v){return Array.isArray(v)?v.map(x=>typeof x==='string'?x:(x&&(x.text||x.label))||'').join(' ').trim():str(v).trim()}
+  function opts(raw){
+    const arr=Array.isArray(raw)?raw:(raw&&typeof raw==='object'?Object.values(raw):[]),texts=[],flags=[];
+    arr.forEach(o=>{if(typeof o==='string'||typeof o==='number'){texts.push(String(o));flags.push(false)}
+      else if(o&&typeof o==='object'){texts.push(str(pick(o,['text','label','option','value','answer','title'])));flags.push(o.correct===true||o.isCorrect===true||o.right===true||o.correct==='true')}});
+    return{texts,flags};
+  }
+  function letterIdx(v,n){const m=String(v).trim().match(/^[A-Za-z]$/);if(!m)return -1;const k=m[0].toUpperCase().charCodeAt(0)-65;return k<n?k:-1}
+  function correctFrom(src,texts,flags){
+    const idx=[];flags.forEach((f,i)=>{if(f)idx.push(i)});if(idx.length)return idx;
+    const zero=pick(src,['correctIndex','correctIndices','correctIndexes','answerIndex','correct','correctAnswer','correctAnswers','answer','answers','correctOption']);
+    const one=pick(src,['correctNumber','answerNumber','correctOptionNumber']);
+    const vals=zero!==undefined?(Array.isArray(zero)?zero:[zero]):(one!==undefined?(Array.isArray(one)?one:[one]).map(v=>Number(v)-1):[]);
+    vals.forEach(v=>{let k=-1;if(typeof v==='number'||/^\d+$/.test(String(v).trim()))k=Number(v);else{k=texts.findIndex(t=>t.trim().toLowerCase()===String(v).trim().toLowerCase());if(k<0)k=letterIdx(v,texts.length)}
+      if(k>=0&&k<texts.length&&idx.indexOf(k)<0)idx.push(k)});
+    return idx;
+  }
+  function truthy(v){if(typeof v==='boolean')return v;const s=String(v).trim().toLowerCase();return ['true','t','yes','y','1','correct'].indexOf(s)>-1}
+  function sceneFrom(c,s,rep,n){
+    const lines=pick(s,['dialogue','conversation','chat','messages']);if(!Array.isArray(lines)||!lines.length)return;
+    const ch=s.characters||s.people||{},L=ch.left||{},R=ch.right||{};
+    const names=[];lines.forEach(l=>{const w=str(l&&(l.speaker||l.who||l.name||l.from));if(w&&!/^narrator$/i.test(w)&&names.indexOf(w)<0)names.push(w)});
+    const ln=str(L.name||names[0]||'Doctor'),rn=str(R.name||names[1]||'You');
+    c.sceneOn=true;c.sceneStyle='chat';c.sceneLeft={name:ln,color:str(L.color,'#1F5FBF'),emoji:''};c.sceneRight={name:rn,color:str(R.color,'#15803D'),emoji:''};
+    c.sceneLines=lines.map(l=>{if(typeof l==='string')return{who:'narrator',text:l};const w=str(l.speaker||l.who||l.name||l.from),t=str(l.text||l.message||l.line);
+      let who='narrator';if(w&&!/^narrator$/i.test(w))who=(w.toLowerCase()===rn.toLowerCase()||/^(right|you|me|rep|learner)$/i.test(w))?'right':'left';return{who:who,text:t}}).filter(l=>l.text);
+  }
+  function convert(raw){
+    const rep={notes:[],needs:[],counts:{}};
+    let src=Array.isArray(raw)?{cards:raw}:raw;
+    if(!src||typeof src!=='object')throw Error('This JSON is not a course. It should be an object with a "cards" list.');
+    const mod=src.module||src.course||{};
+    const inCards=pick(src,['cards','slides','screens'])||pick(mod,['cards','slides']);
+    if(!Array.isArray(inCards)||!inCards.length)throw Error('No cards found. The JSON needs a "cards" list, for example {"title":"My course","cards":[{"type":"text","title":"Hello","text":"Welcome"}]}. Open the JSON guide for the full format.');
+    const title=str(pick(src,['title','courseTitle','name'])||pick(mod,['title','name']),'Untitled course');
+    const objectives=pick(src,['objectives','objective','learningObjectives'])||pick(mod,['objectives','objective','learningObjectives']);
+    const duration=pick(src,['duration'])||pick(mod,['duration']);
+    let desc=str(pick(src,['description'])||pick(mod,['description']));
+    if(!desc&&duration)desc='Duration: '+duration;
+    const used={},idMap={},cards=[],pendingDest=[];
+    inCards.forEach((s,n)=>{
+      if(!s||typeof s!=='object'){rep.notes.push('Card '+(n+1)+' was skipped (it is not an object).');return}
+      let kind=ALIAS[low(s.type)];
+      if(!kind){rep.notes.push('Card '+(n+1)+': unknown type "'+str(s.type,'(none)')+'" was imported as a Text card.');kind='text'}
+      const label=str(pick(s,['title','heading','name','scenarioTitle']),'');
+      let o=null;
+      if(kind==='mcq'||kind==='mrq'){
+        o=opts(pick(s,['options','choices','answers']));const cor=correctFrom(s,o.texts,o.flags);o.cor=cor;
+        if(kind==='mcq'&&cor.length>1){kind='mrq';rep.notes.push('Card '+(n+1)+': several correct answers were marked, so it became a Multiple response card.')}
+        if(kind==='mrq'&&cor.length===0){rep.notes.push('Card '+(n+1)+': no correct answer was marked; the first option was assumed correct. Please check it.');o.cor=[0]}
+        if(kind==='mcq'&&cor.length===0){rep.notes.push('Card '+(n+1)+': no correct answer was marked; the first option was assumed correct. Please check it.');o.cor=[0]}
+      }
+      const img=str(pick(s,['image','imageUrl','imageSrc','src']));
+      const imgPrompt=str(pick(s,['imagePrompt','imageBrief','imageIdea']));
+      if(kind==='image'&&!img){kind='text';if(imgPrompt)rep.needs.push({n:n+1,title:label,what:'Image',brief:imgPrompt})}
+      else if(kind==='text'&&img)kind='image';
+      else if(kind==='text'&&imgPrompt)rep.needs.push({n:n+1,title:label,what:'Image',brief:imgPrompt});
+      if((kind==='hotspot'||kind==='pins')&&!img){rep.notes.push('Card '+(n+1)+': a '+NAMES[kind]+' card needs an image, so it was imported as a Text card.');kind='text'}
+      const c=base(kind,5);
+      let id=str(s.id).trim();if(!id||used[id])id='';c.id=id||uid();used[c.id]=1;if(id)idMap[id]=c.id;
+      rep.counts[kind]=(rep.counts[kind]||0)+1;
+      if(label)c.title=label;
+      const eb=pick(s,['eyebrow','label','tag','section','kicker']);if(eb!==undefined&&typeof eb==='string')c.eyebrow=eb;
+      const body=pick(s,['text','body','content','description','bullets','points','html']);
+      const narr=pick(s,['narration','voiceover','script']);if(narr!==undefined){c.narrationMode='custom';c.narrationText=plain(narr)}
+      const nts=pick(s,['notes','speakerNotes','facilitatorNotes']);if(nts!==undefined)c.authorNotes=plain(nts);
+      const fbOk=pick(s,['feedbackCorrect','correctFeedback']),fbNo=pick(s,['feedbackIncorrect','incorrectFeedback']);
+      if(kind==='cover'){c.eyebrow=eb||'Course introduction';c.html=htmlOf(pick(s,['subtitle','text','body','description','content']))}
+      else if(kind==='text'){c.eyebrow=eb||'Learn';c.html=htmlOf(body);if(imgPrompt)c.authorNotes=(c.authorNotes?c.authorNotes+'\n':'')+'Image brief: '+imgPrompt}
+      else if(kind==='image'){c.eyebrow=eb||'Learn';c.html=htmlOf(body);c.image=img;c.alt=str(pick(s,['alt','altText']),label||'Illustration');c.caption=str(s.caption);const lay=str(pick(s,['layout','imageLayout','imagePosition']));c.imageLayout=['top','left','right'].indexOf(lay)>-1?lay:'top';
+        if(/^https?:/i.test(img))rep.notes.push('Card '+(n+1)+': the image is an online link, so learners need an internet connection to see it.')}
+      else if(kind==='key'){c.eyebrow=eb||'Remember';c.html=htmlOf(pick(s,['message','text','quote','body','content']));c.attribution=str(pick(s,['attribution','source','author']));if(!label)c.title='Key message'}
+      else if(kind==='flash'){c.eyebrow=eb||'Flashcard';c.title=label||'Flashcard';c.frontTitle=str(pick(s,['front','question','term','prompt']),'Question');c.frontHtml='';c.backTitle='Answer';c.backHtml=htmlOf(pick(s,['back','answer','definition','explanation']))}
+      else if(kind==='video'){c.eyebrow=eb||'Watch';c.html=htmlOf(body);c.videoSource='url';c.videoUrl=str(pick(s,['videoUrl','url','src','link']));
+        const vp=str(pick(s,['videoPrompt','videoBrief','videoIdea']));
+        if(!c.videoUrl){rep.needs.push({n:n+1,title:label,what:'Video',brief:vp||'(no description)'});if(vp)c.authorNotes=(c.authorNotes?c.authorNotes+'\n':'')+'Video brief: '+vp}
+        const cps=pick(s,['checkpoints']);if(Array.isArray(cps))c.checkpoints=cps.map(p=>{const q=opts(p.options);const cr=correctFrom(p,q.texts,q.flags);return{time:Number(p.time)||0,question:str(p.question),options:q.texts,correct:cr.length?cr[0]:0,feedback:str(p.feedback)}}).filter(p=>p.question&&p.options.length>1)}
+      else if(kind==='mcq'||kind==='mrq'){
+        c.eyebrow=eb||'Knowledge check';c.title=label||'Knowledge check';c.question=str(pick(s,['question','prompt','stem','text']));c.options=o.texts;
+        if(kind==='mcq')c.correct=o.cor[0];else c.correctMultiple=o.cor;
+        if(fbOk!==undefined)c.feedbackCorrect=plain(fbOk);if(fbNo!==undefined)c.feedbackIncorrect=plain(fbNo);
+        c.assessmentMode=s.scored===false?'practice':'scored';c.points=Number(s.points)||1;c.maxAttempts=Number(pick(s,['maxAttempts','attempts']))||(kind==='mrq'?2:1);if(s.revealAnswer!==undefined)c.revealAnswer=!!s.revealAnswer}
+      else if(kind==='tf'){
+        c.eyebrow=eb||'Quick check';c.title=label||'True or false?';c.question=str(pick(s,['statement','question','text','prompt']));c.options=['True','False'];
+        const a=pick(s,['answer','correct','isTrue','correctAnswer','value']);c.correct=truthy(a===undefined?true:a)?0:1;
+        if(fbOk!==undefined)c.feedbackCorrect=plain(fbOk);if(fbNo!==undefined)c.feedbackIncorrect=plain(fbNo);c.assessmentMode=s.scored===false?'practice':'scored';c.points=Number(s.points)||1;c.maxAttempts=Number(pick(s,['maxAttempts','attempts']))||1}
+      else if(kind==='match'){
+        c.eyebrow=eb||'Matching activity';c.title=label||'Match the pairs';c.question=str(pick(s,['question','instruction','prompt']),'Match each item to its answer.');
+        let pr=pick(s,['pairs','matches','items']),pairs=[];
+        if(Array.isArray(pr))pairs=pr.map(p=>Array.isArray(p)?{left:str(p[0]),right:str(p[1])}:{left:str(pick(p,['left','item','term','prompt','a'])),right:str(pick(p,['right','match','answer','definition','b']))});
+        else if(pr&&typeof pr==='object')pairs=Object.keys(pr).map(k=>({left:k,right:str(pr[k])}));
+        c.matchPairs=pairs.filter(p=>p.left&&p.right);c.matchStyle=/drop/i.test(str(s.style))?'dropdown':'tap';c.points=Number(s.points)||2;c.maxAttempts=Number(pick(s,['maxAttempts','attempts']))||2;c.assessmentMode=s.scored===false?'practice':'scored'}
+      else if(kind==='scenario'){
+        c.eyebrow=eb||'Scenario';c.title=label||'What would you do?';
+        let h=htmlOf(pick(s,['scenarioText','situation','text','body','content','description']));const q=str(pick(s,['question','prompt']));if(q)h+='<p><strong>'+inline(q)+'</strong></p>';c.html=h;
+        const chs=pick(s,['choices','options','responses'])||[];
+        c.scenarioChoices=chs.map(x=>{if(typeof x==='string')x={label:x};const right=x.correct===true||x.isCorrect===true;
+          const d={text:str(pick(x,['label','text','option','choice','response'])),feedback:str(pick(x,['feedback','consequence','explanation'])),points:Number(pick(x,['points','score']))||(right?1:0),destination:'next'};pendingDest.push({choice:d,raw:pick(x,['destination','goTo','next','leadsTo','target']),card:n+1});return d});
+        sceneFrom(c,s,rep,n)}
+      else if(kind==='consequence'){
+        c.eyebrow=eb||'Outcome';c.title=label||'What happens next';c.html=htmlOf(pick(s,['outcome','text','feedback','message','body','consequence','content']));sceneFrom(c,s,rep,n)}
+      else if(kind==='checklist'){c.eyebrow=eb||'Checklist';c.title=label||'Checklist';c.html=htmlOf(body);const it=pick(s,['items','checkItems','steps']);c.checkItems=(Array.isArray(it)?it:[]).map(x=>typeof x==='string'?x:str(x&&(x.text||x.label))).filter(Boolean);c.checkMode='all'}
+      else if(kind==='reflection'){c.eyebrow=eb||'Reflect';c.title=label||'Reflection';c.html=htmlOf(pick(s,['prompt','question','text','body']));c.reflectionPlaceholder=str(s.placeholder,'Write your response\u2026');const ex=str(pick(s,['expertAnswer','modelAnswer','sampleAnswer','expert']));if(ex){c.reflectionExpert=ex;c.reflectionCompare=true}}
+      else if(kind==='order'){c.eyebrow=eb||'Put in order';c.title=label||'Put in the right order';c.question=str(pick(s,['question','instruction','prompt']),'Put these steps in the correct order.');const it=pick(s,['items','steps','sequence']);c.orderItems=(Array.isArray(it)?it:[]).map(x=>typeof x==='string'?x:str(x&&(x.text||x.label))).filter(Boolean);c.orderScoring='partial';c.points=Number(s.points)||2;c.maxAttempts=Number(pick(s,['maxAttempts','attempts']))||2;c.assessmentMode=s.scored===false?'practice':'scored'}
+      else if(kind==='sort'){
+        c.eyebrow=eb||'Sort';c.title=label||'Sort into groups';c.question=str(pick(s,['question','instruction','prompt']),'Sort each item into the right group.');
+        let cat=pick(s,['boxes','categories','buckets','groups']),boxes=[],items=[];
+        if(Array.isArray(cat))boxes=cat.map(b=>typeof b==='string'?b:str(b&&(b.name||b.label||b.title)));
+        else if(cat&&typeof cat==='object'){boxes=Object.keys(cat);boxes.forEach((b,bi)=>(Array.isArray(cat[b])?cat[b]:[]).forEach(t=>items.push({text:str(t),box:bi})))}
+        const it=pick(s,['items']);if(Array.isArray(it))it.forEach(x=>{let b=pick(x,['box','category','group','bucket']);let bi=typeof b==='number'?b:boxes.findIndex(z=>z.toLowerCase()===str(b).toLowerCase());items.push({text:str(pick(x,['text','label','item'])),box:bi<0?0:bi})});
+        c.sortBoxes=boxes;c.sortItems=items.filter(x=>x.text);c.sortScoring='partial';c.points=Number(s.points)||3;c.maxAttempts=Number(pick(s,['maxAttempts','attempts']))||2;c.assessmentMode=s.scored===false?'practice':'scored'}
+      else if(kind==='flipgrid'){c.eyebrow=eb||'Flip tiles';c.title=label||'Tap each tile';c.question=str(pick(s,['question','instruction','prompt']),'Tap each tile to reveal the answer.');const it=pick(s,['tiles','cards','items'])||[];c.flipTiles=it.map(x=>({front:str(pick(x,['front','term','question'])),back:str(pick(x,['back','definition','answer']))})).filter(x=>x.front);c.flipRequired=true}
+      else if(kind==='hotspot'){c.eyebrow=eb||'Find it';c.title=label||'Tap the right spot';c.question=str(pick(s,['question','instruction','prompt']),'Tap the correct area.');c.xImage=img;c.xAlt=str(pick(s,['alt','altText']),label||'Image');
+        c.hsAreas=(pick(s,['areas','hotspots'])||[]).map(a=>({shape:/ell|oval|circ/i.test(str(a.shape))?'ellipse':'rect',x:Number(a.x)||0,y:Number(a.y)||0,w:Number(a.w||a.width)||10,h:Number(a.h||a.height)||10,label:str(a.label)}));c.hsMode=s.mode==='all'?'all':'any';c.points=Number(s.points)||2;c.maxAttempts=Number(pick(s,['maxAttempts','attempts']))||2;c.assessmentMode=s.scored===false?'practice':'scored'}
+      else if(kind==='pins'){c.eyebrow=eb||'Explore';c.title=label||'Explore the image';c.question=str(pick(s,['question','instruction','prompt']),'Tap each numbered pin.');c.xImage=img;c.xAlt=str(pick(s,['alt','altText']),label||'Image');c.pins=(pick(s,['pins'])||[]).map(p=>({x:Number(p.x)||0,y:Number(p.y)||0,title:str(p.title||p.label),text:str(p.text||p.description)}));c.pinsRequired=true}
+      else if(kind==='voice'){c.eyebrow=eb||'Speak';c.title=label||'Voice response';c.question=str(pick(s,['question','prompt']),'Explain this in your own words.');c.html=htmlOf(body);const kw=pick(s,['keywords','keyIdeas','concepts']);if(Array.isArray(kw))c.voiceKeywords=kw.map(String);c.voiceMinKeywords=Number(pick(s,['minKeywords','minimum']))||1;const at=pick(s,['attempts','maxAttempts']);if(at!==undefined)c.voiceMaxAttempts=Number(at)||0;if(s.passFeedback)c.voicePassFeedback=str(s.passFeedback);if(s.retryFeedback)c.voiceRetryFeedback=str(s.retryFeedback)}
+      else if(kind==='results'){c.eyebrow=eb||'Your results';c.title=label||'Results'}
+      else if(kind==='completion'){c.eyebrow=eb||'Course complete';c.title=label||'Well done';c.html=htmlOf(pick(s,['summary','message','text','body','content']))||'<p>You have reached the end.</p>'}
+      cards.push(c);
+    });
+    if(!cards.length)throw Error('No usable cards were found in this JSON.');
+    // scenario destinations -> real card ids
+    const compId=(cards.find(c=>c.type==='results')||cards.find(c=>c.type==='completion')||{}).id;
+    pendingDest.forEach(p=>{const r=p.raw;let d='next';
+      if(r!==undefined&&r!==null&&r!==''){const k=str(r);
+        if(idMap[k])d=idMap[k];
+        else if(/^(next|continue|following)$/i.test(k))d='next';
+        else if(/^(results|end|finish|complete|completion)$/i.test(k))d=compId||'next';
+        else if(/^\d+$/.test(k)&&cards[Number(k)-1])d=cards[Number(k)-1].id;
+        else rep.notes.push('Card '+p.card+': a choice pointed to "'+k+'", which is not a card in this course, so it will simply continue to the next card.')}
+      p.choice.destination=d});
+    // objectives -> a "What you will learn" card
+    if(Array.isArray(objectives)&&objectives.length&&src.addObjectivesCard!==false){
+      const oc=base('text',5);oc.eyebrow='Learning objectives';oc.title='What you will learn';oc.html=htmlOf(objectives);
+      let at=cards.findIndex(c=>c.type==='cover');at=at<0?0:at+1;cards.splice(at,0,oc);rep.counts.text=(rep.counts.text||0)+1;
+      rep.notes.push('Added a "What you will learn" card from the objectives list (delete it if you do not want it).')}
+    const project={format:'CardCraft Project',meta:{createdAt:new Date().toISOString(),updatedAt:new Date().toISOString()},course:{title:title,description:desc},theme:{},cards:cards,editor:{}};
+    const auth=pick(src,['author'])||pick(mod,['author']);if(auth)project.course.author=str(auth);
+    const ps=pick(src,['passingScore'])||pick(mod,['passingScore']);if(ps!==undefined&&Number(ps)>0)project.course.passingScore=Number(ps);
+    return{project:project,report:rep};
+  }
+  function parseLoose(text){
+    let t=String(text||'').replace(/^\uFEFF/,'').trim();
+    const fence=t.match(/```(?:json|JSON)?\s*([\s\S]*?)```/);if(fence)t=fence[1].trim();
+    if(t[0]!=='{'&&t[0]!=='['){const a=t.indexOf('{'),b=t.lastIndexOf('}');if(a>-1&&b>a)t=t.slice(a,b+1)}
+    try{return JSON.parse(t)}catch(e1){
+      const fixed=t.replace(/[\u201C\u201D]/g,'"').replace(/[\u2018\u2019]/g,"'").replace(/,\s*([}\]])/g,'$1');
+      try{return JSON.parse(fixed)}catch(e2){
+        const m=String(e1.message).match(/position (\d+)/);let where='';
+        if(m){const pos=Number(m[1]),before=t.slice(0,pos).split('\n');where=' (near line '+before.length+', column '+(before[before.length-1].length+1)+')'}
+        throw Error('This is not valid JSON'+where+'. Tip: ask the AI to "return only valid JSON".')}}
+  }
+  return{convert:convert,parseLoose:parseLoose,NAMES:NAMES,ALIAS:ALIAS};
+})();
+let ccLastImport=null;
+function ccSimpleOpen(raw){
+  ccLastImport=null;
+  if(raw&&raw.format==='CardCraft Project')return raw;
+  const r=CC_SIMPLE.convert(raw);ccLastImport=r.report;return r.project;
+}
+
+const CC_SAMPLE={
+  title:'Understanding Chronic Cough',
+  description:'A 10-minute module for medical representatives.',
+  objectives:['Define chronic cough','Describe how a cough is triggered','Recognise the burden on patients'],
+  passingScore:80,
+  cards:[
+    {type:'cover',title:'Beyond a Persistent Cough',subtitle:'Understanding chronic cough'},
+    {type:'text',title:'What is chronic cough?',text:['Acute: less than 3 weeks','Subacute: 3 to 8 weeks','Chronic: more than 8 weeks'],imagePrompt:'Clean infographic showing a timeline of acute, subacute and chronic cough'},
+    {type:'key_message',message:'Chronic cough is not simply a symptom. For many patients it becomes a long-term condition.',source:'Module 1'},
+    {type:'flashcard',front:'What is refractory chronic cough?',back:'A cough that persists despite guideline-based evaluation and treatment of identifiable causes.'},
+    {type:'mcq',question:'Which structure produces the voice?',options:['Trachea','Larynx','Lungs'],answer:'B',feedbackCorrect:'Correct. The larynx holds the vocal cords.',feedbackIncorrect:'Not quite. Think about the voice box.'},
+    {type:'true_false',statement:'Chronic cough lasts more than 8 weeks.',answer:true},
+    {type:'multiple_response',question:'Which factors can contribute to chronic cough?',options:[{text:'Air pollution',correct:true},{text:'Tuberculosis history',correct:true},{text:'Hair colour',correct:false}],feedbackCorrect:'Correct.',feedbackIncorrect:'Review the risk factors.'},
+    {type:'match',question:'Match each consequence to its domain.',pairs:[{left:'Sleep disturbance',right:'Physical'},{left:'Embarrassment',right:'Psychological and social'},{left:'Lost productivity',right:'Economic'}]},
+    {type:'order',question:'Put the cough reflex steps in order.',items:['Airway sensors detect irritation','Signal travels to the brainstem','Muscles contract','A cough is produced']},
+    {type:'sort',question:'Sort each item into its group.',categories:{'Physical':['Sleep disturbance','Exhaustion'],'Economic':['Lost productivity','Repeated investigations']}},
+    {type:'flipgrid',title:'Myth or fact?',tiles:[{front:'Myth: it is just a habit',back:'Fact: chronic cough has real, treatable causes.'},{front:'Myth: antibiotics fix it',back:'Fact: most chronic cough is not bacterial.'}]},
+    {id:'scn_1',type:'scenario',title:'A patient case',scenarioText:'A patient has had a cough for 10 weeks. History shows previous TB treatment.',question:'What should the doctor consider first?',
+      dialogue:[{speaker:'Dr Mehta',text:'My patient has coughed for ten weeks.'},{speaker:'You',text:'Has she had any previous chest illness?'}],
+      choices:[{label:'Assess risk factors and history',feedback:'Good: history first.',correct:true,destination:'out_good'},{label:'Assume it is a simple viral cough',feedback:'Too early to assume.',destination:'out_poor'}]},
+    {id:'out_good',type:'consequence',outcome:'Correct. A cough beyond 8 weeks with risk factors needs systematic evaluation.'},
+    {id:'out_poor',type:'consequence',outcome:'Duration beyond 8 weeks should prompt a structured evaluation first.'},
+    {type:'reflection',prompt:'What will you do differently in your next doctor conversation?',expertAnswer:'Start with the patient history before the product.'},
+    {type:'checklist',title:'Before you finish',items:['I can define chronic cough','I can explain the cough reflex']},
+    {type:'video',title:'A patient\u2019s journey',videoUrl:'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4'},
+    {type:'completion',title:'Well done',summary:['Chronic cough lasts more than 8 weeks.','It affects sleep, work and mood.']}
+  ]};
+const CC_AI_PROMPT=[
+'You are helping me build a microlearning course for CardCraft Studio. Return ONLY valid JSON: no explanation, no markdown fences, no comments, no trailing commas.',
+'',
+'FORMAT',
+'{',
+'  "title": "Course title",',
+'  "description": "One or two sentences",',
+'  "objectives": ["Learner can ...", "..."],',
+'  "passingScore": 80,',
+'  "cards": [ ...card objects... ]',
+'}',
+'',
+'Every card has a "type" and usually a "title". Write plain text only (no HTML). In long text use a blank line between paragraphs and start list lines with "- ". **bold** is allowed.',
+'',
+'CARD TYPES AND THEIR FIELDS',
+'- cover: title, subtitle',
+'- text: title, text (a string, or a list of bullet strings)',
+'- key_message: message, source (optional)',
+'- image_text: title, text, image (https link, optional), imagePrompt (a description of an image I will create later)',
+'- flashcard: front, back',
+'- mcq (one correct answer): question, options (list of strings), answer (the correct option text or its letter A/B/C), feedbackCorrect, feedbackIncorrect',
+'- true_false: statement, answer (true or false)',
+'- multiple_response (several correct): question, options [{"text":"...","correct":true}], feedbackCorrect, feedbackIncorrect',
+'- match: question, pairs [{"left":"...","right":"..."}]',
+'- order: question, items (listed in the CORRECT order; CardCraft shuffles them)',
+'- sort: question, categories {"Group A":["item","item"],"Group B":["item"]}',
+'- flipgrid: title, tiles [{"front":"...","back":"..."}]',
+'- scenario: title, scenarioText, question, choices [{"label":"...","feedback":"...","correct":true,"destination":"<id of an outcome card>"}], optional dialogue [{"speaker":"Dr Mehta","text":"..."},{"speaker":"You","text":"..."}]',
+'- consequence (an outcome after a scenario choice): id, outcome',
+'- reflection: prompt, expertAnswer (optional)',
+'- checklist: title, items',
+'- video: title, videoUrl (https link to an MP4) or videoPrompt (a description if there is no link yet)',
+'- voice: question, keywords (list of key ideas), minKeywords',
+'- completion: title, summary (list of takeaways)',
+'',
+'RULES',
+'1. Give every card that a scenario choice points to a unique "id" (for example "out_good"). Other ids are optional.',
+'2. One idea per card; keep text short enough for a phone screen.',
+'3. Never invent image or video links. Use imagePrompt or videoPrompt instead.',
+'4. Start with a cover card and finish with a completion card.',
+'',
+'NOW CREATE THE COURSE FROM THIS CONTENT:',
+'[paste your content here]'
+].join('\n');
+(function(){const st=document.createElement('style');st.textContent='.ccj-ov{position:fixed;top:0;left:0;right:0;bottom:0;z-index:200;background:rgba(15,20,35,.6);display:grid;place-items:center;padding:14px;overflow:auto}.ccj-box{background:#fff;color:#172033;border-radius:16px;width:min(720px,100%);max-height:92vh;overflow:auto;padding:20px 22px;box-shadow:0 20px 60px rgba(0,0,0,.4);font:14px/1.5 system-ui,sans-serif}.ccj-box h2{margin:0 0 6px;font-size:20px}.ccj-box h3{margin:16px 0 6px;font-size:14px}.ccj-box ul,.ccj-box ol{margin:4px 0 0;padding-left:20px}.ccj-box textarea{width:100%;box-sizing:border-box;border:1px solid #cfd6e2;border-radius:10px;padding:10px;font:12px/1.4 ui-monospace,Menlo,Consolas,monospace}.ccj-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.ccj-ok{color:#14532d}.ccj-bad{color:#b42318}.ccj-warn{color:#92400e}.ccj-chip{display:inline-block;background:#eef2ff;border-radius:99px;padding:2px 10px;margin:2px 4px 2px 0;font-size:12px;font-weight:700}.ccj-muted{color:#667085;font-size:13px}.ccj-pick{border:1px solid #e3e7ef;border-radius:12px;max-height:46vh;overflow:auto;margin:10px 0}.ccj-prow{display:flex;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid #eef1f6;cursor:pointer}.ccj-prow:last-child{border-bottom:0}.ccj-prow input{width:18px;height:18px;flex:none}.ccj-pn{width:22px;text-align:right;color:#667085;font-weight:700;flex:none}.ccj-pt{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ccj-pflag{font-size:11px;font-weight:800;color:#92400e;background:#fff4e5;border-radius:99px;padding:2px 8px;flex:none}';document.head.appendChild(st)})();
+function ccEl(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e}
+function ccModal(build){const ov=ccEl('div','ccj-ov'),box=ccEl('div','ccj-box');ov.appendChild(box);ov.addEventListener('click',e=>{if(e.target===ov)ov.remove()});build(box,()=>ov.remove());document.body.appendChild(ov);return ov}
+function ccList(box,title,cls,items){if(!items.length)return;box.appendChild(ccEl('h3',cls,title));const ul=ccEl('ul');items.forEach(t=>ul.appendChild(ccEl('li','',t)));box.appendChild(ul)}
+function ccShowReport(rep,v){
+  const n=state.cards.length;
+  ccModal((box,close)=>{
+    box.appendChild(ccEl('h2','','Imported '+n+' cards from simple JSON'));
+    box.appendChild(ccEl('p','ccj-muted','Your course was built from plain JSON. Everything below is what to check next.'));
+    const chips=ccEl('div');Object.keys(rep.counts).forEach(k=>chips.appendChild(ccEl('span','ccj-chip',(CC_SIMPLE.NAMES[k]||k)+' \u00D7 '+rep.counts[k])));box.appendChild(chips);
+    ccList(box,'Still to add in the editor','ccj-warn',rep.needs.map(x=>'Card '+x.n+(x.title?' \u201C'+x.title+'\u201D':'')+' needs a '+x.what.toLowerCase()+'. Brief: '+x.brief));
+    ccList(box,'Notes about the conversion','',rep.notes);
+    if(v)ccList(box,'Fix before exporting','ccj-bad',v.errs);
+    if(v)ccList(box,'Suggestions','ccj-warn',v.warn.slice(0,8).concat(v.warn.length>8?['\u2026and '+(v.warn.length-8)+' more']:[]));
+    if(!rep.needs.length&&!rep.notes.length&&(!v||!v.errs.length))box.appendChild(ccEl('p','ccj-ok','Nothing else to fix. You can preview and export now.'));
+    const row=ccEl('div','ccj-row'),ok=ccEl('button','btn primary','Got it');ok.onclick=close;row.appendChild(ok);box.appendChild(row);
+  });
+}
+function ccShowError(msg){ccModal((box,close)=>{box.appendChild(ccEl('h2','ccj-bad','This file could not be opened'));box.appendChild(ccEl('p','',msg));const row=ccEl('div','ccj-row'),b=ccEl('button','btn','Close'),g=ccEl('button','btn primary','Open the JSON guide');b.onclick=close;g.onclick=()=>{close();ccShowGuide()};row.appendChild(b);row.appendChild(g);box.appendChild(row)})}
+function ccAfterOpen(){if(!ccLastImport){toast('Project opened');return}const rep=ccLastImport;ccLastImport=null;ccShowReport(rep,validate())}
+function ccApply(proj,rep){ccLastImport=rep;state=normalize(proj);history=[];future=[];previewState={};saveLocal();render();startCardTimer();ccAfterOpen()}
+function ccOpenText(text){
+  const raw=CC_SIMPLE.parseLoose(text);
+  if(raw&&raw.format==='CardCraft Project'){ccApply(raw,null);return}
+  const r=CC_SIMPLE.convert(raw);
+  ccShowPicker(r,keep=>ccApply(ccPickerFilter(r.project,keep),r.report));
+}
+function ccPickerFilter(project,keep){
+  const want={};keep.forEach(id=>{want[id]=1});
+  const cards=project.cards.filter(c=>want[c.id]),kept={};cards.forEach(c=>{kept[c.id]=1});
+  cards.forEach(c=>{if(Array.isArray(c.scenarioChoices))c.scenarioChoices.forEach(ch=>{if(ch.destination&&ch.destination!=='next'&&ch.destination!=='results'&&!kept[ch.destination])ch.destination='next'})});
+  return Object.assign({},project,{cards:cards});
+}
+function ccPlainOf(h){return String(h||'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim()}
+function ccCardLabel(c){
+  let t=String(c.title||'').trim();const body=ccPlainOf(c.html);
+  if(c.type==='key')return body?body.slice(0,70):t;
+  if(c.type==='consequence')return (t?t+': ':'')+body.slice(0,60);
+  return t||body.slice(0,70)||'(no title)';
+}
+function ccShowPicker(r,onProceed){
+  const cards=r.project.cards;
+  ccModal((box,close)=>{
+    box.appendChild(ccEl('h2','','Import '+cards.length+' cards?'));
+    box.appendChild(ccEl('p','ccj-muted','Here is every card in your file, in order. Untick any card you do not want, then press Proceed.'));
+    const list=ccEl('div','ccj-pick'),rows=[];
+    cards.forEach((c,i)=>{
+      const row=ccEl('label','ccj-prow'),cb=ccEl('input');cb.type='checkbox';cb.checked=true;
+      row.appendChild(cb);row.appendChild(ccEl('span','ccj-pn',String(i+1)));row.appendChild(ccEl('span','ccj-chip',CC_SIMPLE.NAMES[c.type]||c.type));row.appendChild(ccEl('span','ccj-pt',ccCardLabel(c)));
+      if(c.authorNotes&&/Image brief:/.test(c.authorNotes))row.appendChild(ccEl('span','ccj-pflag','needs image'));
+      if(c.type==='video'&&!c.videoUrl)row.appendChild(ccEl('span','ccj-pflag','needs video'));
+      list.appendChild(row);rows.push({c:c,cb:cb});
+    });
+    box.appendChild(list);
+    const count=ccEl('p','ccj-muted');box.appendChild(count);
+    const row=ccEl('div','ccj-row'),go=ccEl('button','btn primary','Proceed'),all=ccEl('button','btn','Select all'),none=ccEl('button','btn','Select none'),cn=ccEl('button','btn','Cancel');
+    function upd(){const n=rows.filter(x=>x.cb.checked).length;count.textContent=n+' of '+cards.length+' cards selected';go.disabled=n===0}
+    rows.forEach(x=>x.cb.addEventListener('change',upd));
+    all.onclick=()=>{rows.forEach(x=>{x.cb.checked=true});upd()};none.onclick=()=>{rows.forEach(x=>{x.cb.checked=false});upd()};cn.onclick=close;
+    go.onclick=()=>{const keep=rows.filter(x=>x.cb.checked).map(x=>x.c.id);close();onProceed(keep)};
+    [go,all,none,cn].forEach(b=>row.appendChild(b));box.appendChild(row);upd();
+  });
+}
+function ccCopy(text,btn){
+  const done=()=>{const o=btn.textContent;btn.textContent='Copied \u2713';setTimeout(()=>btn.textContent=o,1600)};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,()=>{ccCopyFallback(text);done()})}else{ccCopyFallback(text);done()}
+}
+function ccCopyFallback(text){const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();try{document.execCommand('copy')}catch(e){}t.remove()}
+function ccShowGuide(){
+  ccModal((box,close)=>{
+    box.appendChild(ccEl('h2','','Build a course with AI: the JSON guide'));
+    box.appendChild(ccEl('p','ccj-muted','CardCraft opens two kinds of JSON: its own project files (saved with \u201CSave project\u201D) and plain, simple JSON like AI tools write. Simple JSON is converted automatically, so you never have to write the complicated format yourself.'));
+    box.appendChild(ccEl('h3','','How to use it'));
+    const ol=ccEl('ol');['Copy the prompt below and paste it into any AI chat (ChatGPT, Claude, Gemini).','Replace the last line with your own content (notes, a workbook chapter, a brief).','Save the AI\u2019s reply as a .json file and use Open, or paste the reply into the box further down and press Import.'].forEach(t=>ol.appendChild(ccEl('li','',t)));box.appendChild(ol);
+    box.appendChild(ccEl('h3','','Prompt for the AI'));
+    const ta=ccEl('textarea');ta.readOnly=true;ta.rows=9;ta.value=CC_AI_PROMPT;box.appendChild(ta);
+    const r1=ccEl('div','ccj-row'),cp=ccEl('button','btn primary','Copy prompt'),sm=ccEl('button','btn','Download a sample course (JSON)');
+    cp.onclick=()=>ccCopy(CC_AI_PROMPT,cp);sm.onclick=()=>download(JSON.stringify(CC_SAMPLE,null,2),'cardcraft-sample-course.json','application/json');r1.appendChild(cp);r1.appendChild(sm);box.appendChild(r1);
+    box.appendChild(ccEl('h3','','Paste the AI\u2019s reply here'));
+    const pa=ccEl('textarea');pa.rows=6;pa.placeholder='Paste JSON here\u2026 (code fences and trailing commas are handled for you)';box.appendChild(pa);
+    const msg=ccEl('p','ccj-bad');box.appendChild(msg);
+    const r2=ccEl('div','ccj-row'),im=ccEl('button','btn primary','Import this JSON'),cl=ccEl('button','btn','Close');
+    im.onclick=()=>{msg.textContent='';if(!pa.value.trim()){msg.textContent='Paste the JSON first.';return}
+      try{CC_SIMPLE.parseLoose(pa.value);if(state.cards.length>1&&!confirm('This replaces the course you are editing. Continue?'))return;ccImportText(pa.value);close()}catch(e){msg.textContent=e.message}};
+    cl.onclick=close;r2.appendChild(im);r2.appendChild(cl);box.appendChild(r2);
+    box.appendChild(ccEl('h3','','Card types you can ask for'));
+    const chips=ccEl('div');Object.keys(CC_SIMPLE.NAMES).forEach(k=>chips.appendChild(ccEl('span','ccj-chip',CC_SIMPLE.NAMES[k])));box.appendChild(chips);
+    box.appendChild(ccEl('p','ccj-muted','Images and videos: the AI cannot create your files. It writes an imagePrompt or videoPrompt, CardCraft lists what is still missing after the import, and you add the files in the editor.'));
+  });
+}
+(function(){const b=document.getElementById('jsonGuide');if(b)b.onclick=ccShowGuide})();
 
 /* Certificate Generator — Phase 4.2 (moved here: needs `state` to exist, which it now does after init()) */
 state.course=state.course||{};
